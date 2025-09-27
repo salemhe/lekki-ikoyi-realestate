@@ -22,45 +22,45 @@ import lekkiPhase1Img from '../assets/images/lekki.jpg';
 
 
 export const residentialProperties = [
-  {
-    id: 1,
-    title: 'Fully Detached Duplex',
-    propertiesCount: '27 Properties',
-    image: fullyDetachedImg,
-  },
-  {
-    id: 2,
-    title: 'Semi Detached Duplex',
-    propertiesCount: '20 Properties',
-    image: semiDetachedImg,
-  },
-  {
-    id: 3,
-    title: 'Apartment',
-    propertiesCount: '20 Properties',
-    image: apartmentImg,
-  },
-  {
-    id: 4,
-    title: 'Terraced Duplex',
-    propertiesCount: '15 Properties',
-    image: terracedDuplexImg,
-  },
+  {
+    id: 1,
+    title: 'Fully Detached Duplex',
+    propertiesCount: '27 Properties',
+    image: fullyDetachedImg,
+  },
+  {
+    id: 2,
+    title: 'Semi Detached Duplex',
+    propertiesCount: '20 Properties',
+    image: semiDetachedImg,
+  },
+  {
+    id: 3,
+    title: 'Apartment',
+    propertiesCount: '20 Properties',
+    image: apartmentImg,
+  },
+  {
+    id: 4,
+    title: 'Terraced Duplex',
+    propertiesCount: '15 Properties',
+    image: terracedDuplexImg,
+  },
 ];
 
 export const cityProperties = [
-  {
-    id: 1,
-    title: 'Ikoyi',
-    propertiesCount: '17 Properties',
-    image: lagosIslandImg,
-  },
-  {
-    id: 2,
-    title: 'Lekki',
-    propertiesCount: '3 Properties',
-    image: ibadanImg,
-  },
+  {
+    id: 1,
+    title: 'Ikoyi',
+    propertiesCount: '17 Properties',
+    image: lagosIslandImg,
+  },
+  {
+    id: 2,
+    title: 'Lekki',
+    propertiesCount: '3 Properties',
+    image: ibadanImg,
+  },
 ];
 
 export const featuredProperties = [
