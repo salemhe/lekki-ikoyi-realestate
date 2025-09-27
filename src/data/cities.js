@@ -15,10 +15,10 @@ import ibadanImg from '../assets/images/Lekki.jpg';
 // import propertySix from '../assets/images/prop6.jpeg';
 
 // ✅ Import new images for popular areas
-import bananaImg from '../assets/images/bannana-island.jpg';
+import bananaImg from '../assets/images/banana-island.jpg';
 import ikoyiImg from '../assets/images/ikoyi.jpg';
 import ikotaLekkiImg from '../assets/images/lekki2.jpg';
-import lekkiPhase1Img from '../assets/images/lekki.jpg';
+import lekkiPhase1Img from '../assets/images/lekki.jpg'
 
 
 export const residentialProperties = [
