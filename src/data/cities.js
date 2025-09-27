@@ -6,20 +6,13 @@ import terracedDuplexImg from '../assets/images/terrace.jpg';
 
 // ✅ Import city images
 import lagosIslandImg from '../assets/images/ikoyi.jpg';
-import ibadanImg from '../assets/images/Lekki.jpg';
-// import propertyOne from '../assets/images/prop1.jpeg';
-// import propertyTwo from '../assets/images/prop2.jpeg';
-// import propertyThree from '../assets/images/prop3.jpeg';
-// import propertyFour from '../assets/images/prop4.jpeg';
-// import propertyFive from '../assets/images/prop5.jpeg';
-// import propertySix from '../assets/images/prop6.jpeg';
+import ibadanImg from '../assets/images/lekki.jpg'; 
 
 // ✅ Import new images for popular areas
 import bananaImg from '../assets/images/banana-island.jpg';
 import ikoyiImg from '../assets/images/ikoyi.jpg';
 import ikotaLekkiImg from '../assets/images/lekki2.jpg';
-import lekkiPhase1Img from '../assets/images/lekki.jpg'
-
+import lekkiPhase1Img from '../assets/images/lekki.jpg';
 
 export const residentialProperties = [
   {
@@ -66,7 +59,6 @@ export const cityProperties = [
 export const featuredProperties = [
   {
     id: 1,
-    // image: propertyOne,
     title: '2-Bed Luxury Apartment With Modern Finishes In Ikoyi, Lagos',
     price: '₦120,000,000',
     beds: 2,
@@ -75,7 +67,6 @@ export const featuredProperties = [
   },
   {
     id: 2,
-    // image: propertyTwo,
     title: 'Ikoyi Luxury Apartment - Stunning 5-Bed Home For Rent',
     price: 'Price Available Upon Request',
     beds: 5,
@@ -84,7 +75,6 @@ export const featuredProperties = [
   },
   {
     id: 3,
-    // image: propertyThree,
     title: 'Discover This Jaw-Dropping Smart Mansion In Lekki, Lagos',
     price: '₦1,000,000,000',
     beds: 5,
@@ -93,7 +83,6 @@ export const featuredProperties = [
   },
   {
     id: 4,
-    // image: propertyFour,
     title: 'Modern 4-Bedroom Semi-Detached Home In Ajah',
     price: '₦180,000,000',
     beds: 4,
@@ -102,7 +91,6 @@ export const featuredProperties = [
   },
   {
     id: 5,
-    // image: propertyFive,
     title: 'Fully Furnished, 5-Bedroom Detached House In Oniru',
     price: '₦2,300,000,000',
     beds: 5,
@@ -111,7 +99,6 @@ export const featuredProperties = [
   },
   {
     id: 6,
-    // image: propertySix,
     title: 'Modern 2-Bedroom Apartments At Urban Nest, Lekki',
     price: '₦80,000,000',
     beds: 2,
