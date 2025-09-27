@@ -1,0 +1,19 @@
+// src/utils/locationAliases.js
+export const LOCATION_ALIASES = {
+  "parkview": "ikoyi",
+  "parkview estate": "ikoyi",
+  "osborne phase 1": "ikoyi",
+  "osborne phase 2": "ikoyi",
+  "old ikoyi": "ikoyi",
+  "banana island ikoyi": "banana island",
+  "banana island": "banana island",
+  "eko atlantic": "victoria island",
+  "eko atlantic, victoria island": "victoria island",
+  "lekki phase 1": "lekki",
+  "chevron, lekki": "lekki",
+  "orchid": "lekki",
+  "surulere lagos": "surulere",
+  "ogudu gra extension": "ogudu",
+  "gbagada phanse 1": "gbagada",
+  "atlantic beach resort, coastal road abijo": "abijo",
+};
