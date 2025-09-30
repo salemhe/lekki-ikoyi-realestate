@@ -617,7 +617,7 @@ const Listings = () => {
   // ---------------- Loader ----------------
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 5000); // First load = 5s
+    const timer = setTimeout(() => setLoading(false), 2000); // First load = 5s
     return () => clearTimeout(timer);
   }, []);
   // ----------------------------------------
@@ -791,7 +791,7 @@ const Listings = () => {
               <div className="bg-white shadow-sm p-6">
                 <h2 className="text-lg font-normal mb-4">Featured Listing</h2>
                 {filteredProperties[0] && (
-                  <div className="border overflow-hidden shadow-sm">
+                  <div className="overflow-hidden shadow-sm">
                     <img
                       src={filteredProperties[0].image}
                       alt={filteredProperties[0].title}

@@ -21,7 +21,7 @@ const Header = () => {
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
           {/* Logo (center on mobile, left on desktop) */}
           <div className="flex-1 lg:flex-none flex justify-center lg:justify-start">
-            <img src={logo} alt="Logo" className="h-16 w-auto" />
+            <img src={logo} alt="Logo" className="h-20 w-auto" />
           </div>
 
           {/* Desktop Nav */}

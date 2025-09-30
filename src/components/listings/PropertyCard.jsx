@@ -83,7 +83,7 @@ const PropertyCard = ({ property }) => {
   const handleClick = () => {
     navigate(`/property/${property.id}`);
   };
-
+  
   // ✅ Ensure tags is always an array
   const tags = Array.isArray(property.tags) ? property.tags : [];
 
@@ -145,4 +145,7 @@ const PropertyCard = ({ property }) => {
 };
 
 export default PropertyCard;
+
+
+
 

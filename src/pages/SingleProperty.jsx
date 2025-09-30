@@ -391,7 +391,7 @@ const SingleProperty = () => {
               <img
                 src={images[0]}
                 alt="Main property view"
-                className="w-full h-full object-cover cursor-pointer"
+                className="w-full h-[500px] object-cover cursor-pointer"
                 onClick={() => {
                   setCurrentImageIndex(0);
                   setIsGalleryOpen(true);

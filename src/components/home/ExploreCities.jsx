@@ -1,20 +1,17 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { Play } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { motion, useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
 import backgroundImage from '../../assets/images/main_background.png';
 import { residentialProperties, cityProperties } from '../../data/cities';
 
 // Section Header
 const SectionHeader = ({ title, subtitle }) => {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, amount: 0.2 });
-
   return (
     <motion.div
-      ref={ref}
       initial={{ opacity: 0, y: 40 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className="mb-6 md:mb-8 text-center lg:text-left"
     >
@@ -31,8 +28,6 @@ const SectionHeader = ({ title, subtitle }) => {
 // Property Card
 const PropertyCard = ({ title, propertiesCount, image, isLarge = false, filter }) => {
   const navigate = useNavigate();
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, amount: 0.2 });
 
   const handleClick = () => {
     navigate('/listings', { state: { filters: filter } });
@@ -40,22 +35,25 @@ const PropertyCard = ({ title, propertiesCount, image, isLarge = false, filter }
 
   return (
     <motion.div
-      ref={ref}
       initial={{ opacity: 0, scale: 0.9 }}
-      animate={inView ? { opacity: 1, scale: 1 } : {}}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
       onClick={handleClick}
-      className={`relative cursor-pointer overflow-hidden shadow-xl group ${
-        isLarge ? 'w-[14rem] h-[32rem]' : 'w-65 h-60 rounded-sm'
+      className={`relative cursor-pointer overflow-hidden shadow-xl group rounded-sm ${
+        isLarge ? 'w-[14rem] h-[32rem]' : 'w-70 h-60'
       }`}
     >
       {/* Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center transition-all duration-300 group-hover:brightness-110"
-        style={{
-          backgroundImage: `url(${image})`,
-        }}
-      ></div>
+      <img
+        src={image}
+        alt={title}
+        loading="lazy"
+        className="absolute inset-0 w-full h-full object-cover transition-all duration-300 group-hover:brightness-110"
+      />
+
+      {/* Overlay (optional for readability) */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/20 to-transparent"></div>
 
       {/* Content */}
       <div className="absolute bottom-5 left-5 text-white z-10">
@@ -79,12 +77,12 @@ const ExploreCities = () => {
   return (
     <div className="font-sans min-h-screen w-full relative overflow-hidden">
       {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-fixed"
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-        }}
-      ></div>
+      <img
+        src={backgroundImage}
+        alt="Background"
+        loading="lazy"
+        className="absolute inset-0 w-full h-full object-cover bg-scroll lg:bg-fixed"
+      />
 
       {/* Main Content */}
       <div className="relative min-h-screen w-full flex items-center justify-center px-4 sm:px-6 lg:px-8 py-10">
