@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const NewSelection = () => {
-  // ✅ Show the last 6 properties
+  // Show the last 6 properties
   const latestProperties = properties.slice(-6);
 
   // Variants for cards

@@ -23,7 +23,7 @@ const Navbar = () => {
             <img 
               src={logo} 
               alt="Logo" 
-              className="h-15 w-auto sm:h-20" // smaller logo on mobile
+              className="h-20 w-auto sm:h-20" 
             />
           </div>
 

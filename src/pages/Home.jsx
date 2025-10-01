@@ -7,6 +7,10 @@ import ExploreCities from '../components/home/ExploreCities';
 import GetInquiryForm from '../components/home/GetInquiaryForm'
 import NewSelection from '../components/home/NewSelection';
 import PopularAreas from '../components/home/PopularAreas';
+import Newsletter from '../components/layout/Newsletter';
+import BlogSection from '../components/home/BlogSection';
+import InlineNewsletter from '../components/home/InLineNewsLetter';
+
 
 const Home = () => {
   return (
@@ -18,6 +22,11 @@ const Home = () => {
        <GetInquiryForm />
        <NewSelection />
        <PopularAreas />
+       <BlogSection />
+       {/* Inline permanent newsletter */}
+       <InlineNewsletter />
+       {/* Popup newsletter (once per session) */}
+       <Newsletter />
     </div>
   );
 };

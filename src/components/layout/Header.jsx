@@ -21,7 +21,7 @@ const Header = () => {
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
           {/* Logo (center on mobile, left on desktop) */}
           <div className="flex-1 lg:flex-none flex justify-center lg:justify-start">
-            <img src={logo} alt="Logo" className="h-20 w-auto" />
+            <img src={logo} alt="Logo" className="sm:h-20 h-25 w-auto" />
           </div>
 
           {/* Desktop Nav */}
@@ -40,7 +40,9 @@ const Header = () => {
           {/* Contact (Desktop Only) */}
           <div className="hidden lg:flex items-center space-x-2 text-sm font-medium">
             <FiPhoneCall className="text-lg" />
-            <span>+2348130082248</span>
+            <a href="tel:+2348130082248" className="hover:underline">
+              +2348130082248
+            </a>
           </div>
 
           {/* Mobile Menu Button (always visible, stays on top) */}
@@ -74,7 +76,9 @@ const Header = () => {
             ))}
             <div className="flex items-center space-x-2 mt-6">
               <FiPhoneCall className="text-lg" />
-              <span>+2348130082248</span>
+              <a href="tel:+2348130082248" className="hover:underline">
+                +2348130082248
+              </a>
             </div>
           </div>
         </div>

@@ -209,9 +209,12 @@ import {
   Instagram,
   Linkedin,
   ChevronUp,
-  ChevronRight 
+  ChevronRight, 
+  Youtube,
+  YoutubeIcon,
+  LinkedinIcon
 } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaLinkedin, FaWhatsapp, FaYoutube, FaYoutubeSquare } from "react-icons/fa";
 import Logo from "../../assets/images/lekki_logo_bg.png";
 
 const Footer = () => {
@@ -239,25 +242,11 @@ const Footer = () => {
             </p>
             <div className="flex items-center gap-4 pt-2">
               <a
-                href="#"
-                aria-label="Facebook"
-                className="hover:text-red-600 transition-colors"
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
+                href="https://www.instagram.com/lekkikoyi/?hl=en"
                 aria-label="Instagram"
                 className="hover:text-red-600 transition-colors"
               >
                 <Instagram className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                aria-label="LinkedIn"
-                className="hover:text-red-600 transition-colors"
-              >
-                <Linkedin className="h-5 w-5" />
               </a>
               <a
                 href="https://wa.me/2348130082248"
@@ -265,6 +254,20 @@ const Footer = () => {
                 className="hover:text-green-500 transition-colors"
               >
                 <FaWhatsapp className="h-5 w-5" />
+              </a>
+              <a
+                href="https://www.youtube.com/@LekkiKoyi"
+                aria-label="LinkedIn"
+                className="hover:text-red-600 transition-colors"
+              >
+                <Youtube className="h-5 w-5" />
+              </a>
+              <a
+                href="#"
+                aria-label="Facebook"
+                className="hover:text-red-600 transition-colors"
+              >
+                <FaLinkedin className="h-5 w-5" />
               </a>
             </div>
           </div>
