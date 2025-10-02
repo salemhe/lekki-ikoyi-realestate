@@ -1,5 +1,15 @@
 import Property1 from '../assets/propertys/property-1.jpg';
+import Property2 from '../assets/propertys/property-2.jpg';
 import Property3 from '../assets/propertys/property-3.jpg';
+import Property4 from '../assets/propertys/property-4.jpg';
+import Property5 from '../assets/propertys/property-5.jpg';
+import Property6 from '../assets/propertys/property-1.jpg';
+import Property7 from '../assets/propertys/property-7.jpg';
+import Property8 from '../assets/propertys/property-8.jpg';
+import Property9 from '../assets/propertys/property-1.jpg';
+import Property10 from '../assets/propertys/property-10.jpg';
+import Property11 from '../assets/propertys/property.jpg';
+import Property12 from '../assets/propertys/property-12.jpg';
 import Property15 from '../assets/propertys/property-15.jpg';
 import Property16 from '../assets/propertys/property-16.jpg';
 import Property17 from '../assets/propertys/property-17.jpg';
@@ -10,34 +20,30 @@ import Property26 from '../assets/propertys/property-26.jpg';
 export const properties = [
   {
     id: 1,
-    title: "3 Bedroom Flat",
-    location: "Lekki Phase 1",
-    price: "₦285,000,000",
-    beds: 3,
-    baths: 3,
-    size: "",
+    title: "8 Units of 4 Bedroom Fully  Furnished Apartments with a Bq each.",
+    location: "Ikoyi Parkview estate",
+    price: "₦3,800,000,000",
+    beds: 4,
+    baths: 5,
+    size: "1950sqm",
     tags: ["FOR SALE", "FEATURED", "HOT OFFER"],
     category: "Apartment",
     timePosted: "Just Now",
     agent: "Lekki Epe",
-    documents: "Gov Consent",
+    documents: "C of O",
     image: Property1,
     description:
-      "This modern 3-bedroom flat in the heart of Lekki offers premium finishing, spacious living areas, and proximity to key attractions. Perfect for families seeking both comfort and security.",
+      "This modern 8 units of 4-bedroom fully furnished apartment in the heart of Parkview offers premium finishing, spacious living areas, and proximity to key attractions. Perfect for families seeking both comfort and security.",
     amenities: [
-      "24/7 Power Supply",
+      "2 Big generators",
       "Swimming Pool",
-      "Gym",
-      "CCTV Surveillance",
-      "Spacious Parking",
-      "Fully Fitted Kitchen",
     ],
   },
   {
   id: 2,
   title: "3 Bedroom Penthouse",
   location: "Ikoyi Parkview",
-  price: "₦410,000,000",
+  price: "₦420,000,000",
   beds: 3,
   baths: 4, 
   size: "",
@@ -46,7 +52,7 @@ export const properties = [
   timePosted: "Just Now",
   agent: "Ikoyi Agent", // changed to reflect location
   documents: "Deed of Assignment",
-  image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  image: Property2,
   description:
     "Experience luxury living in this 3-bedroom penthouse located in the prestigious Ikoyi neighborhood. Featuring modern architecture, elegant finishes, and panoramic city views, this property is perfect for high-class living.",
   amenities: [
@@ -63,7 +69,7 @@ export const properties = [
   id: 3,
   title: "5 Bedroom Fully Detached",
   location: "Ikoyi Banana island road",
-  price: "₦1,900,000,000",
+  price: "₦2,300,000,000",
   beds: 5,
   baths: 5,
   size: "",
@@ -76,13 +82,13 @@ export const properties = [
   description:
     "An exquisite 5-bedroom fully detached duplex in Ikoyi. Featuring expansive living areas, premium fittings, and excellent security. Ideal for families seeking luxury and comfort in one of Lagos’s most prestigious neighborhoods.",
   amenities: [
-    "Private Swimming Pool",
+    "Swimming Pool",
     "Fully Fitted Kitchen",
-    "Walk-in Closets",
-    "CCTV Surveillance",
-    "24/7 Power Supply",
+    "Home Office",
+    "Elevator",
+    "Cinema",
     "Spacious Parking",
-    "Gated Estate Security",
+    "2 Bq",
   ],
 },
   {
@@ -98,7 +104,7 @@ export const properties = [
   timePosted: "Just Now",
   agent: "Lekki Epe",
   documents: "C of O",
-  image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  image: Property4,
   description:
     "A prime 1000SQM bare land located in Ikoyi, Lagos. Perfect for residential or commercial development, offering investors a rare opportunity in one of Lagos’s most exclusive neighborhoods.",
   amenities: [
@@ -122,7 +128,7 @@ export const properties = [
   timePosted: "Just Now",
   agent: "Lekki Epe",
   documents: "Fed C of O",
-  image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  image: Property5,
   description:
     "A prime 3100SQM bare land located in Osborne Phase 1, Ikoyi, Lagos. Perfect for residential development, offering investors a rare opportunity in one of Lagos’s most exclusive neighborhoods.",
   amenities: [
@@ -146,7 +152,7 @@ export const properties = [
   timePosted: "Just Now",
   agent: "Lekki Epe",
   documents: "C of O",
-  image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+  image: Property4,
   description:
     "A prime 1000SQM bare land located in Osborne Phase 1, Ikoyi, Lagos. Perfect for residential development, offering investors a rare opportunity in one of Lagos’s most exclusive neighborhoods.",
   amenities: [
@@ -170,7 +176,7 @@ export const properties = [
   timePosted: "Just Now",
   agent: "Lekki Epe",
   documents: "Governor’s Consent",
-  image: "https://unsplash.com/photos/a-house-with-a-lawn-chair-and-a-pool-ring-in-front-of-it-4-9TSXpKrt0",
+  image: Property7,
   description:
     "A beautiful 4-bedroom semi-detached duplex located in Old Ikoyi. This property offers modern interiors, spacious rooms, and excellent finishing. Perfect for families looking for comfort and style in a serene environment.",
   amenities: [
@@ -196,7 +202,7 @@ export const properties = [
   timePosted: "Just Now",
   agent: "Lekki Epe",
   documents: "Governor’s Consent",
-  image: "https://unsplash.com/photos/a-bright-and-elegant-living-room-DNTpZVQjzg8",
+  image: Property8,
   description:
     "A stylish 3-bedroom flat located in Lekki. Featuring well-designed interiors, ample natural lighting, and a serene environment. Perfect for young families, professionals, or investors seeking premium real estate in a prime location.",
   amenities: [
@@ -211,18 +217,18 @@ export const properties = [
 },
   {
   id: 9,
-  title: "400SQM Land in Lekki Phase 1", //this property doesnt exisit...
+  title: "2000SQM Land for Sale in Lekki Phase 1", 
   location: "Lekki",
-  price: "₦460,000,000",
+  price: "₦2,500,000 / SQM",
   beds: null, 
   baths: null,
-  size: "400 SQM",
+  size: "2000 SQM",
   tags: ["FOR SALE"],
   category: "Land",
   timePosted: "Just Now",
   agent: "Lekki Epe",
   documents: "Governor’s Consent",
-  image: "/images/placeholder.jpg",
+  image: "/images/placeholder.jpg", //no picture 
   description:
     "A strategically located 400SQM plot in Lekki Phase 1, one of Lagos’s most desirable neighborhoods. Ideal for luxury residential or mixed-use development. Excellent access to key business districts, premium schools, and social hubs.",
   amenities: [
@@ -247,7 +253,7 @@ export const properties = [
   timePosted: "Just Now",
   agent: "Lekki Epe",
   documents: "Governor’s Consent",
-  image: "/images/placeholder.jpg",
+  image: Property10,
   description:
     "A high-end 3-bedroom luxury flat located in the prestigious Ikoyi area. Designed with modern architecture and top-class finishes, this flat offers unmatched comfort, style, and security in one of Lagos’s most exclusive neighborhoods.",
   amenities: [
@@ -272,7 +278,7 @@ export const properties = [
   timePosted: "Just Now",
   agent: "Lekki Epe",
   documents: "Governor’s Consent",
-  image: "/images/placeholder.jpg",
+  image: Property11,
   description:
     "An ultra-luxurious 5-bedroom penthouse in the heart of Ikoyi. Featuring breathtaking city views, premium finishing, and expansive living areas designed for comfort and prestige. Perfect for high-net-worth individuals seeking exclusivity and sophistication.",
   amenities: [
@@ -294,12 +300,12 @@ export const properties = [
   beds: 6,
   baths: 7,
   size: "",
-  tags: ["FOR SALE"],
+  tags: ["FOR SALE", "FEATURED", "HOT OFFER"],
   category: "Apartment",
   timePosted: "Just Now",
   agent: "Lekki Epe",
   documents: "Governor’s Consent",
-  image: "/images/placeholder.jpg",
+  image: Property12,
   description:
     "A magnificent 6-bedroom waterfront detached house located in the prestigious Banana Island. Designed with ultra-modern architecture, expansive interiors, and direct waterfront access. Perfect for elite homeowners who value privacy, exclusivity, and world-class luxury.",
   amenities: [
@@ -380,7 +386,7 @@ export const properties = [
   timePosted: "Just Now",
   agent: "Ikoyi Agent", 
   documents: "Deed of Assignment",
-  image: "/images/placeholder.jpg",
+  image: Property15,
   description:
     "A well-designed 2-bedroom flat apartment located in Ikoyi. Offering spacious interiors, quality finishing, and excellent security, this property is ideal for both living and investment purposes.",
   amenities: [
@@ -404,7 +410,7 @@ export const properties = [
   timePosted: "Just Now",
   agent: "Ogudu Agent",
   documents: "C of O",
-  image: "/images/placeholder.jpg",
+  image: Property16,
   description:
     "Brand new development of 10 units of luxurious 4-bedroom semi-detached duplexes located in Ogudu GRA Extension. Each unit is built with modern finishing and spacious interiors, offering excellent value for families and investors.",
   amenities: [
@@ -429,7 +435,7 @@ export const properties = [
   timePosted: "Just Now",
   agent: "Ikoyi Agent",
   documents: "C of O",
-  image: "/images/placeholder.jpg",
+  image: Property17,
   description:
     "Exclusive 4 units of 2-bedroom flats in the heart of Ikoyi. These premium apartments combine elegance, security, and accessibility, making them ideal for both residential use and long-term investment opportunities.",
   amenities: [
@@ -504,7 +510,7 @@ export const properties = [
   timePosted: "Just Now",
   agent: "Ikoyi Agent",
   documents: "Deed of Assignment",
-  image: "/images/placeholder.jpg",
+  image: Property20,
   description:
     "A beautifully finished luxury 4-bedroom flat in the prime area of Ikoyi. Designed with elegance, spacious interiors, and top-notch fittings, this property offers the perfect balance of comfort and exclusivity.",
   amenities: [
@@ -554,7 +560,7 @@ export const properties = [
   timePosted: "Just Now",
   agent: "Ikoyi Agent",
   documents: "Deed of Assignment",
-  image: "/images/placeholder.jpg",
+  image: Property22,
   description:
     "A premium set of 2 units of 3-bedroom terraces in Ikoyi. Each unit is spaciously built with modern architectural design and finishing, offering both comfort and functionality for luxury living.",
   amenities: [
@@ -655,7 +661,7 @@ export const properties = [
   timePosted: "Just Now",
   agent: "Victoria Island Agent",
   documents: "Deed of Assignment",
-  image: "/images/placeholder.jpg",
+  image: Property26,
   description:
     "A 5-bedroom luxury carcass terrace located in Victoria Island. This property gives investors and homeowners the opportunity to customize finishing to their taste while enjoying a prime location in Lagos.",
   amenities: [
