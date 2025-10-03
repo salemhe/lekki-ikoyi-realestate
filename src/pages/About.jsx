@@ -1,20 +1,20 @@
 import React from "react";
-import backgroundImage from "../assets/images/about-header.jpg";
-import Navbar from "../components/layout/Navbar";
+import backgroundImage from "../assets/images/ikoyi.jpg";
+import Header from "../components/layout/Header";
 
 const About = () => {
   return (
     <div className="bg-white text-gray-800">
-      <Navbar />
+      <Header />
 
       {/* Hero / Banner */}
       <div
-        className="relative h-64 bg-cover bg-center"
+        className="relative h-50 bg-cover bg-center sm:h-64"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         {/* Light Blue Overlay */}
         <div className="absolute inset-0 bg-blue-400/40 flex items-start">
-          <h1 className="text-4xl md:text-5xl font-light text-white mt-24 px-6 drop-shadow-md">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mt-24 px-6 sm:px-20 drop-shadow-md">
             About Us
           </h1>
         </div>

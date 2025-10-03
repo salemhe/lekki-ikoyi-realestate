@@ -1,6 +1,6 @@
 import React from "react";
 import backgroundImage from "../assets/images/about-header.jpg";
-import Navbar from "../components/layout/Navbar";
+import Header from "../components/layout/Header";
 import { motion } from "framer-motion";
 
 const bounceIn = {
@@ -15,7 +15,7 @@ const bounceIn = {
 const InquiryForm = () => {
   return (
     <div className="bg-white text-gray-800">
-      <Navbar />
+      <Header />
       {/* Main Content */}
       <div className="max-w-4xl mx-auto px-6 py-16">
         <motion.div

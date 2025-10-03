@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import Navbar from "../components/layout/Navbar";
 import { properties } from "../data/properties";
 import ListingPageCard from "../components/listings/ListingPageCard";
 import logo from "../assets/images/lekkiikoyi_logo.png";
@@ -18,6 +17,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
+import Header from "../components/layout/Header";
 
 const SingleProperty = () => {
   const { id } = useParams();
@@ -47,16 +47,16 @@ const SingleProperty = () => {
     setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
 
   // Dummy amenities
-  const amenities = [
-    "Swimming Pool",
-    "Gym",
-    "Parking Space",
-    "24/7 Security",
-    "CCTV",
-    "Water Supply",
-    "Children’s Play Area",
-    "Backup Power",
-  ];
+  // const amenities = [
+  //   "Swimming Pool",
+  //   "Gym",
+  //   "Parking Space",
+  //   "24/7 Security",
+  //   "CCTV",
+  //   "Water Supply",
+  //   "Children’s Play Area",
+  //   "Backup Power",
+  // ];
 
   // Related properties: filter by bedrooms OR category, exclude current
   const relatedProperties = properties
@@ -93,9 +93,9 @@ const SingleProperty = () => {
 
   return (
     <div className="w-full bg-white">
-      <Navbar />
+      <Header />
 
-      <div className="max-w-6xl mx-auto px-4 md:px-6 pt-5">
+      <div className="max-w-6xl mx-auto px-4 md:px-6 pt-7">
         {/* Breadcrumb */}
         <div className="hidden md:block">
           <Link
@@ -217,7 +217,7 @@ const SingleProperty = () => {
             viewport={{ once: true, amount: 0.2 }}
             className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-6 border border-gray-200 py-3 px-3 mb-5"
           >
-            {amenities.map((item, i) => (
+            {property.amenities.map((item, i) => (
               <motion.div
                 variants={bounceIn}
                 key={i}
@@ -454,7 +454,7 @@ const SingleProperty = () => {
             viewport={{ once: true, amount: 0.2 }}
             className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-6 border border-gray-200 py-3 px-3 mb-15"
           >
-            {amenities.map((item, i) => (
+            {property.amenities.map((item, i) => (
               <motion.div
                 variants={bounceIn}
                 key={i}

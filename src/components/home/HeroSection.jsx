@@ -68,7 +68,7 @@ const HeroSection = () => {
       {/* Fallback: if video fails, you could have a background image behind it, but optional */}
 
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-l from-black/80 via-black/50 to-transparent lg:bg-gradient-to-r z-10" />
+      <div className="absolute inset-0 bg-gradient-to-l from-black/80 via-black/60 to-transparent lg:bg-gradient-to-r z-10" />
 
       {/* Content */}
       <div className="relative z-20 max-w-6xl mx-auto px-6 py-24 flex flex-col items-start justify-center">
@@ -77,9 +77,9 @@ const HeroSection = () => {
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-white text-lg sm:text-2xl mb-2 font-light"
+          className="text-white text-md sm:text-2xl mb-2 font-light"
         >
-          Welcome to <span className="text-red-500 font-bold">Lekkikoyi Realty Limited</span>
+          Welcome to <span className="text-red-500 font-extrabold">Lekkikoyi Property Investment Limited</span>
         </motion.h2>
 
         {/* Main headline */}

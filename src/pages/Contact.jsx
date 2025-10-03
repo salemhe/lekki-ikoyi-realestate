@@ -1,6 +1,5 @@
 import React from "react";
-import backgroundImage from "../assets/images/about-header.jpg";
-import Navbar from "../components/layout/Navbar";
+import backgroundImage from "../assets/images/ikoyi.jpg";
 import {
   FaYoutube,
   FaInstagram,
@@ -10,6 +9,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
+import Header from "../components/layout/Header";
 
 // Motion variants
 const bounceIn = {
@@ -24,15 +24,15 @@ const bounceIn = {
 const Contact = () => {
   return (
     <div className="bg-white text-gray-800">
-      <Navbar />
+      <Header />
 
       {/* Hero / Banner */}
       <div
-        className="relative h-64 bg-cover bg-center"
+        className="relative h-50 bg-cover bg-center sm:h-64"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         <div className="absolute inset-0 bg-blue-400/40 flex items-start">
-          <h1 className="text-4xl md:text-5xl font-light text-white mt-24 px-6 drop-shadow-md">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mt-24 px-6 sm:px-20 drop-shadow-md">
             Contact Us
           </h1>
         </div>
@@ -92,11 +92,9 @@ const Contact = () => {
                     Headquarters
                 </h3>
                 <p className="text-sm text-gray-700">
-                  4th floor Kunech Towers,
-                  <br />
-                  Km 18 Osapa, Lekki Peninsula II,
-                  <br />
-                  Lagos, Nigeria
+                  Olamijuyin Avenue, Parkview Estate,
+                  <br /> 
+                  Ikoy, Lagos
                 </p>
               </div>
             </div>

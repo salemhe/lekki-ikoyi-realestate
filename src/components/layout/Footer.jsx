@@ -313,8 +313,9 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-red-500" />
                 <span>
-                  4th floor Kunech Towers, Km 18 Osapa, Lekki Penninsula II,
-                  Lagos, Nigeria
+                  Olamijuyin Avenue, Parkview Estate,
+                  <br /> 
+                  Ikoy, Lagos
                 </span>
               </li>
               <li className="flex items-center gap-3">

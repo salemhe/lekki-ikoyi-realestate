@@ -20,7 +20,7 @@ import Property26 from '../assets/propertys/property-26.jpg';
 export const properties = [
   {
     id: 1,
-    title: "8 Units of 4 Bedroom Fully  Furnished Apartments with a Bq each.",
+    title: "8 Units of 4 Bedroom Fully  Furnished Apartments",
     location: "Ikoyi Parkview estate",
     price: "₦3,800,000,000",
     beds: 4,

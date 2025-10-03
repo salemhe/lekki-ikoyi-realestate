@@ -87,9 +87,9 @@
 // src/pages/BlogPage.jsx
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import Navbar from "../components/layout/Navbar";
 import blogPosts from "../data/blogContent";
 import { motion } from "framer-motion";
+import Header from "../components/layout/Header";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -109,7 +109,7 @@ const BlogPage = () => {
 
   return (
     <div className="bg-white text-gray-900">
-      <Navbar />
+      <Header />
 
       {/* Hero Section */}
       <section className="relative bg-gray-50 border-b border-gray-200">

@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import backgroundImage from "../../assets/images/ibadan.jpeg";
+import backgroundImage from "../../assets/images/ikoyi.jpg";
 
 const GetInquiryForm = () => {
   // Animation variants
@@ -10,15 +10,18 @@ const GetInquiryForm = () => {
   };
 
   return (
-    <section className="w-full">
+    <section 
+      className="w-full h-full py-20 bg-cover bg-center"
+      style={{
+        backgroundImage: `linear-gradient(rgba(238, 67, 67, 0.9), rgba(239, 68, 68, 0.85)), url(${backgroundImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <div className="flex flex-col md:flex-row">
         {/* Left Side */}
-        <div
-          className="relative bg-cover bg-center text-white md:w-3/5 p-8 md:p-16"
-          style={{
-            backgroundImage: `linear-gradient(rgba(255, 77, 77, 0.92), rgba(255, 77, 77, 0.92)), url(${backgroundImage})`,
-          }}
-        >
+        <div className="relative bg-cover bg-center text-white md:w-3/5 p-8 md:p-16">
+         
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-12">
             {/* Col 1 Row 1 */}
             <AnimatedBlock variants={textVariant}>
@@ -27,7 +30,7 @@ const GetInquiryForm = () => {
               </h2>
               <br />
               <br />
-              <div className="border solid 2px w-[100px] text-[#faa688]"></div>
+              <div className="border solid 2px w-[100px] text-white"></div>
             </AnimatedBlock>
 
             {/* Col 2 Row 1 */}
@@ -43,7 +46,7 @@ const GetInquiryForm = () => {
               </p>
               <br />
               <br />
-              <div className="border solid 2px w-[50px] text-[#faa688]"></div>
+              <div className="border solid 2px w-[50px] text-white"></div>
             </AnimatedBlock>
 
             {/* Col 1 Row 2 */}
@@ -58,7 +61,7 @@ const GetInquiryForm = () => {
               </p>
               <br />
               <br />
-              <div className="border solid 2px w-[50px] text-[#faa688]"></div>
+              <div className="border solid 2px w-[50px] text-white"></div>
             </AnimatedBlock>
 
             {/* Col 2 Row 2 */}
@@ -76,7 +79,7 @@ const GetInquiryForm = () => {
               </p>
               <br />
               <br />
-              <div className="border solid 2px w-[50px] text-[#faa688]"></div>
+              <div className="border solid 2px w-[50px] text-white"></div>
             </AnimatedBlock>
           </div>
         </div>
