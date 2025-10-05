@@ -18,28 +18,31 @@ import {
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import Header from "../components/layout/Header";
+import noImage from "../assets/images/noimage.png";
 
 const SingleProperty = () => {
   const { id } = useParams();
   const property = properties.find((p) => p.id === parseInt(id));
 
   const fallbackImages = [
-    "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+    noImage,
+    noImage,
+    // "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80",
+    // "https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?auto=format&fit=crop&w=800&q=80",
+    // "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
   ];
 
   if (!property)
     return <p className="text-center mt-20">Property not found.</p>;
 
-  const images = property.images?.length
-    ? property.images
-    : [property.image, ...fallbackImages];
+  const images = property.gallery && property.gallery.length > 0
+  ? [property.image, ...property.gallery] // main image first, then gallery
+  : [property.image]; // fallback if no gallery
+
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+  const [liked, setLiked] = useState(false); 
 
   const nextImage = () =>
     setCurrentImageIndex((prev) => (prev + 1) % images.length);
@@ -68,6 +71,33 @@ const SingleProperty = () => {
     .slice(0, 4);
 
 
+    // --- Handlers ---
+  const handleLike = () => setLiked(!liked);
+
+  const handleShare = async () => {
+    const currentUrl = window.location.href;
+    try {
+      if (navigator.share) {
+        await navigator.share({
+          title: property.title,
+          text: "Check out this amazing property!",
+          url: currentUrl,
+        });
+      } else {
+        await navigator.clipboard.writeText(currentUrl);
+        alert("🔗 Link copied to clipboard!");
+      }
+    } catch (err) {
+      console.error("Share failed:", err);
+    }
+  };
+
+  const handlePrint = () => window.print();
+
+  
+
+
+
   
   //Animations for framer-motion 
   // Fade up when in view
@@ -87,7 +117,6 @@ const SingleProperty = () => {
     hidden: { opacity: 0, x: 100 },
     show: { opacity: 1, x: 0, transition: { duration: 0.6, staggerChildren: 0.1 } },
   };
-
 
 
 
@@ -116,19 +145,36 @@ const SingleProperty = () => {
 
         {/* MOBILE VIEW */}
         <div className="md:hidden relative">
-          {/* Floating action icons */}
+        {/* Floating buttons */}
           <div className="absolute top-2 right-4 z-10 flex gap-3">
-            <button className="bg-white/80 p-2 rounded-full shadow">
+            <button
+              onClick={handlePrint}
+              className="bg-white/80 p-2 rounded-full shadow"
+            >
               <Printer size={18} />
             </button>
-            <button className="bg-white/80 p-2 rounded-full shadow">
+
+            <button
+              onClick={handleLike}
+              className={`bg-gray-100 p-2 rounded-full hover:bg-gray-200 transition-transform duration-200 ${
+                liked 
+                  ? "text-red-500 scale-110 animate-pulse" 
+                  : "text-gray-700 scale-100"
+              }`}
+            >
               <Heart size={18} />
             </button>
-            <button className="bg-white/80 p-2 rounded-full shadow">
+
+
+            <button
+              onClick={handleShare}
+              className="bg-white/80 p-2 rounded-full shadow"
+            >
               <Share2 size={18} />
             </button>
           </div>
 
+          
           {/* Mobile Image with arrows + counter */}
           <div className="relative mb-4 -mx-4 mt-[-20px]">
             <img
@@ -245,7 +291,7 @@ const SingleProperty = () => {
               >
                 <iframe
                   title="Property Location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.460414408647!2d3.4563!3d6.4281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf52e8d1b4f3f%3A0x3e1d48a3f3aefb0!2sLekki%20Phase%201!5e0!3m2!1sen!2sng!4v1690000000000!5m2!1sen!2sng"
+                  src={property.mapEmbed}
                   width="100%"
                   height="200%"
                   allowFullScreen=""
@@ -372,13 +418,29 @@ const SingleProperty = () => {
                 {property.price || "Available upon request"}
               </p>
               <div className="flex gap-3">
-                <button className="bg-gray-100 p-2 rounded-full hover:bg-gray-200">
+                <button 
+                  onClick={handlePrint}
+                  className="bg-gray-100 p-2 rounded-full hover:bg-gray-200"
+                >
                   <Printer size={18} />
                 </button>
-                <button className="bg-gray-100 p-2 rounded-full hover:bg-gray-200">
-                  <Heart size={18} />
-                </button>
-                <button className="bg-gray-100 p-2 rounded-full hover:bg-gray-200">
+
+                <button
+                onClick={handleLike}
+                className={`bg-gray-100 p-2 rounded-full hover:bg-gray-200 transition-transform duration-200 ${
+                  liked 
+                    ? "text-red-500 scale-110 animate-pulse" 
+                    : "text-gray-700 scale-100"
+                }`}
+              >
+                <Heart size={18} />
+              </button>
+
+
+                <button 
+                  onClick={handleShare}
+                  className="bg-gray-100 p-2 rounded-full hover:bg-gray-200"
+                >
                   <Share2 size={18} />
                 </button>
               </div>
@@ -386,12 +448,12 @@ const SingleProperty = () => {
           </div>
 
           {/* Images grid */}
-          <div className="grid grid-cols-3 gap-4 h-96 mb-20 relative">
+          <div className="grid grid-cols-3 gap-4 h-96 mb-25 relative">
             <div className="col-span-2 row-span-2 relative">
               <img
                 src={images[0]}
                 alt="Main property view"
-                className="w-full h-[500px] object-cover cursor-pointer"
+                className="w-full h-[520px] object-cover cursor-pointer"
                 onClick={() => {
                   setCurrentImageIndex(0);
                   setIsGalleryOpen(true);
@@ -402,7 +464,7 @@ const SingleProperty = () => {
               <img
                 src={images[1] || images[0]}
                 alt="Interior view"
-                className="w-full h-full object-cover cursor-pointer"
+                className="w-full h-[250px] object-cover cursor-pointer"
                 onClick={() => {
                   setCurrentImageIndex(1);
                   setIsGalleryOpen(true);
@@ -413,7 +475,7 @@ const SingleProperty = () => {
               <img
                 src={images[2] || images[0]}
                 alt="Interior stairs"
-                className="w-full h-full object-cover cursor-pointer"
+                className="w-full h-[250px] object-cover cursor-pointer"
                 onClick={() => {
                   setCurrentImageIndex(2);
                   setIsGalleryOpen(true);
@@ -434,7 +496,7 @@ const SingleProperty = () => {
 
           {/* Description */}
           <div className="mb-8 py-5 px-3">
-            <h2 className="text-2xl font-normal mb-10 mt-10 text-center">
+            <h2 className="text-2xl font-normal mb-8 mt-16 text-center">
               Description
             </h2>
             <p className="text-3xl font-semibold text-center mb-4">
@@ -446,25 +508,32 @@ const SingleProperty = () => {
             </p>
           </div>
 
-          {/* Amenities */}
-          <motion.div
-            variants={bounceIn}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.2 }}
-            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-6 border border-gray-200 py-3 px-3 mb-15"
-          >
-            {property.amenities.map((item, i) => (
-              <motion.div
-                variants={bounceIn}
-                key={i}
-                className="flex items-center gap-3 bg-gray-50 border border-gray-200 rounded-lg p-3 transition"
-              >
-                <CheckCircle className="text-red-500 flex-shrink-0" size={20} />
-                <span className="text-gray-800 text-sm font-medium">{item}</span>
-              </motion.div>
-            ))}
-          </motion.div>
+
+          {/* Amenities*/}
+          <div className="mt-10">
+            <h1 className="text-2xl font-normal mb-8 text-center">
+              Amenities
+            </h1>
+
+            <motion.div
+              variants={bounceIn}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.2 }}
+              className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-6 border border-gray-200 py-3 px-3 mb-15 rounded-lg"
+            >
+              {property.amenities.map((item, i) => (
+                <motion.div
+                  variants={bounceIn}
+                  key={i}
+                  className="flex items-center gap-3 bg-gray-50 border border-gray-200 rounded-lg p-3 transition"
+                >
+                  <CheckCircle className="text-red-500 flex-shrink-0" size={20} />
+                  <span className="text-gray-800 text-sm font-medium">{item}</span>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
 
           {/* Map + Contact Form */}
           <div className="mb-20 flex flex-col lg:flex-row gap-8">
@@ -480,7 +549,7 @@ const SingleProperty = () => {
               <div className="w-full h-64 rounded-lg overflow-hidden shadow">
                 <iframe
                   title="Property Location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.460414408647!2d3.4563!3d6.4281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf52e8d1b4f3f%3A0x3e1d48a3f3aefb0!2sLekki%20Phase%201!5e0!3m2!1sen!2sng!4v1690000000000!5m2!1sen!2sng"
+                  src={property.mapEmbed}
                   width="100%"
                   height="200%"
                   allowFullScreen=""
@@ -551,6 +620,281 @@ const SingleProperty = () => {
 };
 
 export default SingleProperty;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { useState } from "react";
+// import { useParams, Link } from "react-router-dom";
+// import { motion } from "framer-motion";
+// import { properties } from "../data/properties";
+// import ListingPageCard from "../components/listings/ListingPageCard";
+// import logo from "../assets/images/lekkiikoyi_logo.png";
+// import {
+//   ChevronLeft,
+//   ChevronRight,
+//   Phone,
+//   MapPin,
+//   Printer,
+//   Heart,
+//   Share2,
+//   CheckCircle,
+// } from "lucide-react";
+// import { FaWhatsapp } from "react-icons/fa";
+// import Header from "../components/layout/Header";
+
+// const SingleProperty = () => {
+//   const { id } = useParams();
+//   const property = properties.find((p) => p.id === parseInt(id));
+
+//   const fallbackImages = [
+//     "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80",
+//     "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80",
+//     "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80",
+//     "https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?auto=format&fit=crop&w=800&q=80",
+//     "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+//   ];
+
+//   if (!property)
+//     return <p className="text-center mt-20">Property not found.</p>;
+
+//   const images = property.gallery?.length
+//     ? property.gallery
+//     : [property.image, ...fallbackImages];
+
+//   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+//   const [liked, setLiked] = useState(false);
+
+//   const nextImage = () =>
+//     setCurrentImageIndex((prev) => (prev + 1) % images.length);
+//   const prevImage = () =>
+//     setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+
+//   const relatedProperties = properties
+//     .filter(
+//       (p) =>
+//         p.id !== property.id &&
+//         (p.bedrooms === property.bedrooms || p.category === property.category)
+//     )
+//     .slice(0, 4);
+
+//   // --- Handlers ---
+//   const handleLike = () => setLiked(!liked);
+
+//   const handleShare = async () => {
+//     const currentUrl = window.location.href;
+//     try {
+//       if (navigator.share) {
+//         await navigator.share({
+//           title: property.title,
+//           text: "Check out this amazing property!",
+//           url: currentUrl,
+//         });
+//       } else {
+//         await navigator.clipboard.writeText(currentUrl);
+//         alert("🔗 Link copied to clipboard!");
+//       }
+//     } catch (err) {
+//       console.error("Share failed:", err);
+//     }
+//   };
+
+//   const handlePrint = () => window.print();
+
+//   // --- Animations ---
+//   const fadeUp = {
+//     hidden: { opacity: 0, y: 30 },
+//     show: {
+//       opacity: 1,
+//       y: 0,
+//       transition: { duration: 0.6, staggerChildren: 0.1 },
+//     },
+//   };
+
+//   const bounceIn = {
+//     hidden: { opacity: 0, scale: 0.8 },
+//     show: {
+//       opacity: 1,
+//       scale: 1,
+//       transition: {
+//         type: "spring",
+//         stiffness: 120,
+//         damping: 10,
+//         staggerChildren: 0.1,
+//       },
+//     },
+//   };
+
+//   return (
+//     <div className="w-full bg-white">
+//       <Header />
+
+//       <div className="max-w-6xl mx-auto px-4 md:px-6 pt-7">
+//         {/* Breadcrumb */}
+//         <div className="hidden md:block">
+//           <Link
+//             to="/listings"
+//             className="inline-flex items-center gap-2 text-gray-600 hover:text-black mb-4"
+//           >
+//             <ChevronLeft size={20} />
+//             Back to Listings
+//           </Link>
+//           <div className="text-sm text-gray-500 mb-6">
+//             <Link to="/" className="text-red-500 hover:underline">
+//               Home
+//             </Link>{" "}
+//             › <span className="text-red-500">{property.category}</span> ›{" "}
+//             {property.title}
+//           </div>
+//         </div>
+
+//         {/* --- MOBILE VIEW --- */}
+//         <div className="md:hidden relative">
+//           {/* Floating buttons */}
+//           <div className="absolute top-2 right-4 z-10 flex gap-3">
+//             <button
+//               onClick={handlePrint}
+//               className="bg-white/80 p-2 rounded-full shadow"
+//             >
+//               <Printer size={18} />
+//             </button>
+
+//             <button
+//               onClick={handleLike}
+//               className={`bg-white/80 p-2 rounded-full shadow ${
+//                 liked ? "text-red-500" : "text-gray-700"
+//               }`}
+//             >
+//               <Heart size={18} />
+//             </button>
+
+//             <button
+//               onClick={handleShare}
+//               className="bg-white/80 p-2 rounded-full shadow"
+//             >
+//               <Share2 size={18} />
+//             </button>
+//           </div>
+
+//           {/* Mobile Image + Arrows */}
+//           <div className="relative mb-4 -mx-4 mt-[-20px]">
+//             <img
+//               src={images[currentImageIndex]}
+//               alt="Property"
+//               className="w-full h-64 object-cover"
+//             />
+//             {images.length > 1 && (
+//               <>
+//                 <button
+//                   onClick={prevImage}
+//                   className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full"
+//                 >
+//                   <ChevronLeft size={20} />
+//                 </button>
+//                 <button
+//                   onClick={nextImage}
+//                   className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full"
+//                 >
+//                   <ChevronRight size={20} />
+//                 </button>
+//                 <div className="absolute bottom-4 right-4 bg-black/70 text-white px-2 py-1 rounded text-sm">
+//                   {currentImageIndex + 1}/{images.length}
+//                 </div>
+//               </>
+//             )}
+//           </div>
+
+//           {/* Title + Details */}
+//           <h1 className="text-xl font-semibold text-gray-900 mb-2">
+//             {property.title}
+//           </h1>
+//           <div className="flex items-center text-gray-600 mb-2">
+//             <MapPin size={16} className="mr-2" />
+//             {property.location}
+//           </div>
+//           <p className="text-2xl font-semibold text-gray-900 mb-6">
+//             <span className="font-normal text-[20px]">From</span>{" "}
+//             {property.price || "Available upon request"}
+//           </p>
+//         </div>
+
+//         {/* --- DESKTOP VIEW --- */}
+//         <div className="hidden md:block">
+//           <div className="flex items-start justify-between mb-4">
+//             <div>
+//               <h1 className="text-3xl font-normal mb-1">{property.title}</h1>
+//               <p className="text-gray-600 flex items-center mb-2 font-light">
+//                 <MapPin size={16} className="mr-2" />
+//                 {property.location}
+//               </p>
+//             </div>
+
+//             <div className="flex flex-col items-end gap-3">
+//               <p className="text-3xl font-semibold text-gray-800">
+//                 <span className="font-normal">From</span>{" "}
+//                 {property.price || "Available upon request"}
+//               </p>
+//               <div className="flex gap-3">
+//                 <button
+//                   onClick={handlePrint}
+//                   className="bg-gray-100 p-2 rounded-full hover:bg-gray-200"
+//                 >
+//                   <Printer size={18} />
+//                 </button>
+//                 <button
+//                   onClick={handleLike}
+//                   className={`bg-gray-100 p-2 rounded-full hover:bg-gray-200 ${
+//                     liked ? "text-red-500" : "text-gray-700"
+//                   }`}
+//                 >
+//                   <Heart size={18} />
+//                 </button>
+//                 <button
+//                   onClick={handleShare}
+//                   className="bg-gray-100 p-2 rounded-full hover:bg-gray-200"
+//                 >
+//                   <Share2 size={18} />
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+
+//         {/* Rest of your code below remains same */}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default SingleProperty;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

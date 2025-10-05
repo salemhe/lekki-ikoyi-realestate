@@ -70,7 +70,7 @@ const Contact = () => {
                     href="mailto:customercare@edenoasisrealty.com"
                     className="text-red-500 hover:underline"
                   >
-                    customercare@lekkikoyi.com
+                    Lekkikoyi@gmail.com
                   </a>
                 </p>
                 <p className="text-sm text-gray-700">
@@ -81,7 +81,7 @@ const Contact = () => {
                     href="mailto:info@edenoasisrealty.com"
                     className="text-red-500 hover:underline"
                   >
-                    info@lekkikoyi.com
+                    Lekkikoyi@gmail.com
                   </a>
                 </p>
               </div>

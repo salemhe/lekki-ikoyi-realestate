@@ -278,7 +278,7 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li>
                 <a
-                  href="#"
+                  href="/listings"
                   className="hover:text-red-600 transition-colors flex items-center gap-2"
                 >
                   <ChevronRight className="w-4 h-4" />
@@ -287,7 +287,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/listings"
                   className="hover:text-red-600 transition-colors flex items-center gap-2"
                 >
                   <ChevronRight className="w-4 h-4" />
@@ -296,7 +296,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/listings"
                   className="hover:text-red-600 transition-colors flex items-center gap-2"
                 >
                   <ChevronRight className="w-4 h-4" />
@@ -324,7 +324,7 @@ const Footer = () => {
                   href="mailto:info@lekkikoyi.com"
                   className="hover:text-red-600 transition-colors"
                 >
-                  info@lekkikoyi.com
+                  Lekkikoyi@gmail.com
                 </a>
               </li>
             </ul>
@@ -339,6 +339,8 @@ const Footer = () => {
           <p>© {new Date().getFullYear()} Lekkikoyi — All rights reserved</p>
           <p className="text-gray-400">
             Designed for a seamless real estate experience.
+            <br />
+             <a href="https://www.instagram.com/salem.hamis/?hl=en" className="text-white/80 serif">Built by @salem.hamis</a>
           </p>
         </div>
       </footer>

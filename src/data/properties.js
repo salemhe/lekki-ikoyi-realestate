@@ -10,12 +10,68 @@ import Property9 from '../assets/propertys/property-1.jpg';
 import Property10 from '../assets/propertys/property-10.jpg';
 import Property11 from '../assets/propertys/property.jpg';
 import Property12 from '../assets/propertys/property-12.jpg';
+import Property14 from '../assets/propertys/property-14.jpg';
 import Property15 from '../assets/propertys/property-15.jpg';
 import Property16 from '../assets/propertys/property-16.jpg';
-import Property17 from '../assets/propertys/property-17.jpg';
+import Property17 from '../assets/propertys/property-17(new).jpg';
+import Property18 from '../assets/propertys/property-18.jpg';
 import Property20 from '../assets/propertys/property-20.jpg';
+import Property21 from '../assets/propertys/property-21.jpg';
 import Property22 from '../assets/propertys/property-22.jpg';
+import Property22a from '../assets/propertys/property-22(a).jpg';
+import Property22b from '../assets/propertys/property-22(b).jpg';
+import Property22c from '../assets/propertys/property-22(c).jpg';
+import Property22d from '../assets/propertys/property-22(d).jpg';
+import Property22e from '../assets/propertys/property-22(e).jpg';
+import Property22f from '../assets/propertys/property-22(f).jpg';
+import Property22g from '../assets/propertys/property-22(g).jpg';
+import Property23 from '../assets/propertys/property-23.jpg';
+import Property24 from '../assets/propertys/property-24.jpg';
+import Property24a from '../assets/propertys/property-24(a).jpg';
+import Property24b from '../assets/propertys/property-24(b).jpg';
+import Property24c from '../assets/propertys/property-24(c).jpg';
+import Property24d from '../assets/propertys/property-24(d).jpg';
+import Property24e from '../assets/propertys/property-24(e).jpg';
+import Property25 from '../assets/propertys/property-25.jpg';
 import Property26 from '../assets/propertys/property-26.jpg';
+import Property27 from '../assets/propertys/property-27.jpg';
+import Property28 from '../assets/propertys/property-28.jpg';
+import Property30 from '../assets/propertys/property-30.jpg';
+import Property30a from '../assets/propertys/property-30(a).jpg';
+import Property30b from '../assets/propertys/property-30(b).jpg';
+import Property32 from '../assets/propertys/property-32.jpg';
+import Property32a from '../assets/propertys/property-32(a).jpg';
+import Property32b from '../assets/propertys/property-32(b).jpg';
+import Property32c from '../assets/propertys/property-32(c).jpg';
+import Property32d from '../assets/propertys/property-32(d).jpg';
+import Property32e from '../assets/propertys/property-32(e).jpg';
+import Property32f from '../assets/propertys/property-32(f).jpg';
+import Property33 from '../assets/propertys/property-33.jpg';
+import Property33a from '../assets/propertys/property-33(a).jpg';
+import Property34 from '../assets/propertys/property-34.jpg';
+import Property34a from '../assets/propertys/property-34(a).jpg';
+import Property34b from '../assets/propertys/property-34(b).jpg';
+import Property34c from '../assets/propertys/property-34(c).jpg';
+import Property35 from '../assets/propertys/property-35.jpg';
+import Property37 from '../assets/propertys/property-37.jpg';
+import Property37a from '../assets/propertys/property-37(a).jpg';
+import Property37b from '../assets/propertys/property-37(b).jpg';
+import Property37c from '../assets/propertys/property-37(c).jpg';
+import Property37d from '../assets/propertys/property-37(d).jpg';
+import Property37e from '../assets/propertys/property-37(e).jpg';
+import Property37f from '../assets/propertys/property-37(f).jpg';
+import Property37g from '../assets/propertys/property-37(g).jpg';
+import Property39 from '../assets/propertys/property-39.jpg';
+import Property39a from '../assets/propertys/property-39(a).jpg';
+import Property39b from '../assets/propertys/property-39(b).jpg';
+import Property39c from '../assets/propertys/property-39(c).jpg';
+import Property39d from '../assets/propertys/property-39(d).jpg';
+import Property39e from '../assets/propertys/property-39(e).jpg';
+import Property39f from '../assets/propertys/property-39(f).jpg';
+import Property39g from '../assets/propertys/property-39(g).jpg';
+import Property40 from '../assets/propertys/property-40.jpg';
+
+
 
 export const properties = [
   {
@@ -32,12 +88,19 @@ export const properties = [
     agent: "Lekki Epe",
     documents: "C of O",
     image: Property1,
+    gallery: [        
+    // Property1,
+    // Property2,
+    // Property3,
+    // Property4,
+  ],
     description:
       "This modern 8 units of 4-bedroom fully furnished apartment in the heart of Parkview offers premium finishing, spacious living areas, and proximity to key attractions. Perfect for families seeking both comfort and security.",
     amenities: [
       "2 Big generators",
       "Swimming Pool",
     ],
+    mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7928.968149889181!2d3.4367250353201784!3d6.460187584884675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4ead2fdb675%3A0xb2deeece992a1325!2sParkview%20Estate%2C%20Ikoyi%2C%20Lagos%20106104%2C%20Lagos!5e0!3m2!1sen!2sng!4v1759621251456!5m2!1sen!2sng",
   },
   {
   id: 2,
@@ -361,7 +424,7 @@ export const properties = [
   timePosted: "Just Now",
   agent: "Lekki Epe",
   documents: "C of O",
-  image: "/images/placeholder.jpg",
+  image: Property14,
   description:
     "A massive 17,000SQM bareland located in Surulere, Lagos. Perfect for large-scale residential, mixed-use, or commercial developments. Situated in a prime and highly accessible area, this property presents an excellent investment opportunity for developers and investors.",
   amenities: [
@@ -460,7 +523,7 @@ export const properties = [
   timePosted: "Just Now",
   agent: "Lekki Epe",
   documents: "C of O",
-  image: "/images/placeholder.jpg",
+  image: Property18,
   description:
     "Prime hectares of land located within Atlantic Beach Resort, Coastal Road Abijo. This expansive property offers great potential for luxury estates, resorts, or large-scale developments. Situated in a rapidly developing area with excellent accessibility, it is a strategic investment for long-term value.",
   amenities: [
@@ -535,7 +598,7 @@ export const properties = [
   timePosted: "Just Now",
   agent: "Lekki Epe", 
   documents: "Governor's Consent",
-  image: "/images/placeholder.jpg",
+  image: Property21,
   description:
     "A luxury 4-bedroom maisonette located in Ikoyi. Featuring modern architecture, spacious interiors, and premium finishing, this property provides comfort and exclusivity in one of Lagos' most prestigious neighborhoods.",
   amenities: [
@@ -561,6 +624,15 @@ export const properties = [
   agent: "Ikoyi Agent",
   documents: "Deed of Assignment",
   image: Property22,
+  gallery: [
+    Property22a,
+    Property22b,
+    Property22c,
+    Property22d,
+    Property22e,
+    Property22f,
+    Property22g,
+  ],
   description:
     "A premium set of 2 units of 3-bedroom terraces in Ikoyi. Each unit is spaciously built with modern architectural design and finishing, offering both comfort and functionality for luxury living.",
   amenities: [
@@ -585,7 +657,7 @@ export const properties = [
   timePosted: "Just Now",
   agent: "Lekki Epe", 
   documents: "Deed of Assignment",
-  image: "/images/placeholder.jpg",
+  image: Property23,
   description:
     "A set of 5 brand new fully detached 5-bedroom duplexes located in the prestigious Ikoyi area. Each unit is designed with modern architecture, premium finishing, and spacious living areas, offering luxury and comfort for family living or investment.",
   amenities: [
@@ -611,7 +683,14 @@ export const properties = [
   timePosted: "Just Now",
   agent: "Lekki Epe",
   documents: "Deed of Assignment",
-  image: "/images/placeholder.jpg",
+  image: Property24,
+  gallery: [
+    Property24a,
+    Property24b,
+    Property24c,
+    Property24d,
+    Property24e,
+  ],
   description:
     "A luxurious 4-bedroom terrace located in the highly sought-after Ikoyi area. This home combines elegance, modern finishing, and spacious interiors, making it ideal for both comfortable living and long-term investment.",
   amenities: [
@@ -625,20 +704,20 @@ export const properties = [
 },
   {
   id: 25,
-  title: "5 Bedroom Semi-Detached Duplex",
-  location: "Banana Island, Ikoyi",
-  price: "₦900,000,000",
-  beds: 5,
-  baths: 5,
+  title: "1 Bedroom Apartment",
+  location: "Opebi Ikeja",
+  price: "₦145,000,000",
+  beds: 1,
+  baths: 2,
   size: "",
   tags: ["FOR SALE"],
-  category: "Duplex",
+  category: "Apartment",
   timePosted: "Just Now",
   agent: "Lekki Epe",
   documents: "Deed of Assignment",
-  image: "/images/placeholder.jpg",
+  image: Property25,
   description:
-    "A premium 5-bedroom semi-detached duplex situated in the prestigious Banana Island, Ikoyi. Featuring modern architecture, spacious rooms, and premium finishing, this home offers the perfect blend of luxury and comfort.",
+    "A premium 1-bedroom apartment situated in the Opebi Ikeja. Featuring modern architecture, a spacious rooms, and premium finishing.",
   amenities: [
     "24/7 Power Supply",
     "Gated Community",
@@ -686,7 +765,7 @@ export const properties = [
   timePosted: "Just Now",
   agent: "Lekki Epe",
   documents: "Governor’s Consent",
-  image: "/images/placeholder.jpg",
+  image: Property27,
   description:
     "An exquisite 5-bedroom detached house located in the prestigious Banana Island. This luxury home boasts premium finishing, spacious interiors, and a serene waterfront environment, offering unmatched comfort and exclusivity.",
   amenities: [
@@ -703,7 +782,7 @@ export const properties = [
   id: 28,
   title: "Luxury 4 Bedroom Terrace",
   location: "Banana Island",
-  price: "₦1,000,000,000",
+  price: "₦800,000,000",
   beds: 4,
   baths: 4,
   size: "",
@@ -712,7 +791,7 @@ export const properties = [
   timePosted: "Just Now",
   agent: "Lekki Epe",
   documents: "Governor’s Consent",
-  image: "/images/placeholder.jpg",
+  image: Property28,
   description:
     "A premium 4-bedroom luxury terrace in Banana Island. Featuring modern architecture, spacious living areas, and high-quality finishes, this home is perfect for those seeking elegance and comfort in Lagos’s most exclusive community.",
   amenities: [
@@ -750,17 +829,21 @@ export const properties = [
   {
   id: 30,
   title: "Luxury 3 Bedroom Flat",
-  location: "Gbagada Phase 1",
-  price: "₦165,000,000",
+  location: "Opebi Ikeja",
+  price: "₦245,000,000",
   beds: 3,
-  baths: 3,
+  baths: 4,
   size: "",
   tags: ["FOR SALE"],
   category: "Flat",
   timePosted: "Just Now",
   agent: "Lekki Epe",
   documents: "Deed of Assignment",
-  image: "/images/placeholder.jpg",
+  image: Property30,
+  gallery: [
+    Property30a,
+    Property30b,
+  ],
   description:
     "A modern luxury 3-bedroom flat located in Gbagada Phase 1. Featuring spacious living areas, contemporary finishing, and excellent accessibility, this property is perfect for families or investors seeking comfort and convenience.",
   amenities: [
@@ -808,7 +891,15 @@ export const properties = [
   timePosted: "Just Now",
   agent: "Lekki Epe",
   documents: "Deed of Assignment",
-  image: "/images/placeholder.jpg",
+  image: Property32,
+  gallery: [
+    Property32a,
+    Property32b,
+    Property32c,
+    Property32d,
+    Property32e,
+    Property32f,
+  ],
   description:
     "A modern 2-bedroom flat located in the prestigious Eko Atlantic, Victoria Island. With ocean views, state-of-the-art facilities, and premium security, this flat is perfect for luxury living or investment in Lagos’s most exclusive district.",
   amenities: [
@@ -834,7 +925,10 @@ export const properties = [
   timePosted: "Just Now",
   agent: "Lekki Epe",
   documents: "Deed of Assignment",
-  image: "/images/placeholder.jpg",
+  image: Property33,
+  gallery: [
+    Property33a,
+  ],
   description:
     "An ultra-luxury 5-bedroom penthouse in Ikoyi, offering panoramic city views, spacious interiors, and premium modern finishes. Perfect for high-end buyers seeking sophistication and comfort in Lagos’s most prestigious neighborhood.",
   amenities: [
@@ -861,7 +955,12 @@ export const properties = [
   timePosted: "Just Now",
   agent: "Lekki Epe",
   documents: "Deed of Assignment",
-  image: "/images/placeholder.jpg",
+  image: Property34,
+  gallery: [
+    Property34a,
+    Property34b,
+    Property34c,
+  ],
   description:
     "A premium 2-bedroom flat in Banana Island, designed for modern living with stylish interiors and serene surroundings. Perfect for investors or homeowners seeking exclusivity in Lagos’s most prestigious neighborhood.",
   amenities: [
@@ -886,7 +985,7 @@ export const properties = [
   timePosted: "Just Now",
   agent: "Lekki Epe",
   documents: "Governors concent",
-  image: "/images/placeholder.jpg",
+  image: Property35,
   description:
     "A stunning fully detached 4-bedroom duplex in Chevron, Lekki, crafted with premium finishes and spacious interiors. Ideal for families looking for comfort, security, and a luxurious lifestyle in one of Lagos’s fastest-growing neighborhoods.",
   amenities: [
@@ -901,7 +1000,7 @@ export const properties = [
   ],
 },
 {
-  id: 36,
+  id: 36, //delete
   title: "4 Bedroom Terrace",
   location: "Ikoyi Parkview estate",
   price: "₦600,000,000",
@@ -940,7 +1039,16 @@ export const properties = [
   timePosted: "Just Now",
   agent: "Lekki Epe",
   documents: "Govenors concent",
-  image: "/images/placeholder.jpg",
+  image: Property37,
+  gallery: [
+    Property37a,
+    Property37b,
+    Property37c,
+    Property37d,
+    Property37e,
+    Property37f,
+    Property37g,
+  ],
   description:
     "An exquisite 6-bedroom fully detached house in Ikoyi, offering unmatched luxury with expansive living spaces, modern architecture, and premium finishes. Perfect for ultra-high-net-worth individuals seeking elegance and privacy in Lagos’s prime neighborhood.",
   amenities: [
@@ -994,7 +1102,16 @@ export const properties = [
   timePosted: "Just Now",
   agent: "Lekki Epe",
   documents: "Govenors concent",
-  image: "/images/placeholder.jpg",
+  image: Property39,
+  gallery: [
+    Property39a,
+    Property39b,
+    Property39c,
+    Property39d,
+    Property39e,
+    Property39f,
+    Property39g,
+  ],
   description:
     "A sophisticated 4-bedroom duplex in Lekki, fully detached and designed with modern elegance. This home combines functionality, comfort, and security—perfect for growing families and investors in Lagos’s thriving property market.",
   amenities: [
@@ -1021,7 +1138,7 @@ export const properties = [
   timePosted: "Just Now",
   agent: "Lekki Epe",
   documents: "Govenors concent",
-  image: "/images/placeholder.jpg",
+  image: Property40,
   description:
     "A stylish 2-bedroom flat apartment in Parkview, combining comfort and elegance with modern fittings. Perfect for young professionals or investors seeking a secure and serene environment in one of Lagos’s prestigious estates.",
   amenities: [
