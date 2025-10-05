@@ -41,6 +41,8 @@ const InquiryForm = () => {
                 <option value="">Select</option>
                 <option value="buy">Buying</option>
                 <option value="sell">Selling</option>
+                <option value="buy">Renting</option>
+                <option value="sell">Shortlet</option>
               </select>
             </div>
 

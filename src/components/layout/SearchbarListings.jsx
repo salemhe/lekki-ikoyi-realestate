@@ -79,7 +79,7 @@ const SearchBarListings = ({ onSearch, initialFilters = {}, navigateTo }) => {
             <option value="Victoria Island">Victoria Island</option>
             <option value="Parkview">Parkview</option>
             <option value="Surulere">Surulere</option>
-            <option value="Gbagada">Opebi</option>
+            <option value="Opebi">Opebi</option>
             <option value="Ogudu">Ogudu</option>
             <option value="Abijo">Abijo</option>
           </select>

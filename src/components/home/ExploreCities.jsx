@@ -202,9 +202,9 @@ const PropertyCard = ({ title, propertiesCount, image, isLarge = false, filter }
 
 const ExploreCities = () => {
   const apartment = residentialProperties.find((p) => p.title === 'Apartment');
-  const mainDuplex = residentialProperties.find((p) => p.title === 'Fully Detached Duplex');
-  const semiDuplex = residentialProperties.find((p) => p.title === 'Semi Detached Duplex');
-  const terracedDuplex = residentialProperties.find((p) => p.title === 'Terraced Duplex');
+  const mainDuplex = residentialProperties.find((p) => p.title === 'Duplex Properties');
+  const semiDuplex = residentialProperties.find((p) => p.title === 'Flat Properties');
+  const terracedDuplex = residentialProperties.find((p) => p.title === 'Terrace Duplex');
 
   return (
     <div className="font-sans min-h-screen w-full relative overflow-hidden">
@@ -232,10 +232,10 @@ const ExploreCities = () => {
 
             {/* Right Column */}
             <div className="w-full flex flex-col gap-4 items-center lg:w-2/3 lg:flex-row lg:items-start">
-              <PropertyCard {...mainDuplex} isLarge={true} filter={{ type: 'Fully Detached Duplex' }} />
+              <PropertyCard {...mainDuplex} isLarge={true} filter={{ type: 'Duplex' }} />
               <div className="flex flex-col gap-4 items-center">
-                <PropertyCard {...semiDuplex} filter={{ type: 'Semi Detached Duplex' }} />
-                <PropertyCard {...terracedDuplex} filter={{ type: 'Terraced Duplex' }} />
+                <PropertyCard {...semiDuplex} filter={{ type: 'Flat' }} />
+                <PropertyCard {...terracedDuplex} filter={{ type: 'Terrace' }} />
               </div>
             </div>
           </div>

@@ -17,13 +17,13 @@ import lekkiPhase1Img from '../assets/images/lekki.jpg';
 export const residentialProperties = [
   {
     id: 1,
-    title: 'Fully Detached Duplex',
+    title: 'Duplex Properties', //Duplex
     propertiesCount: '27 Properties',
     image: fullyDetachedImg,
   },
   {
     id: 2,
-    title: 'Semi Detached Duplex',
+    title: 'Flat Properties', //Flats
     propertiesCount: '20 Properties',
     image: semiDetachedImg,
   },
@@ -35,7 +35,7 @@ export const residentialProperties = [
   },
   {
     id: 4,
-    title: 'Terraced Duplex',
+    title: 'Terrace Duplex', //Duplex
     propertiesCount: '15 Properties',
     image: terracedDuplexImg,
   },

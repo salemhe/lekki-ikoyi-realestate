@@ -237,7 +237,7 @@ const Footer = () => {
           <div className="space-y-5">
             <img src={Logo} alt="Lekkikoyi Logo" className="h-16 w-auto" />
             <p className="text-sm leading-relaxed text-white">
-              Premium real estate listings in Ikoyi, Lekki, Banana Island and
+              Premium real estate listings in Ikoyi, Lekki, Banana Island, Victoria Island and
               beyond. We connect you with your dream property.
             </p>
             <div className="flex items-center gap-4 pt-2">
@@ -278,7 +278,7 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li>
                 <a
-                  href="/listings"
+                  href="/listings?location=Ikoyi"
                   className="hover:text-red-600 transition-colors flex items-center gap-2"
                 >
                   <ChevronRight className="w-4 h-4" />
@@ -287,7 +287,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/listings"
+                  href="/listings?location=Lekki"
                   className="hover:text-red-600 transition-colors flex items-center gap-2"
                 >
                   <ChevronRight className="w-4 h-4" />
@@ -296,11 +296,20 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/listings"
+                  href="/listings?location=Banana%20Island"
                   className="hover:text-red-600 transition-colors flex items-center gap-2"
                 >
                   <ChevronRight className="w-4 h-4" />
                   Banana Island
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/listings?location=Victoria%20Island"
+                  className="hover:text-red-600 transition-colors flex items-center gap-2"
+                >
+                  <ChevronRight className="w-4 h-4" />
+                  Victoria Island
                 </a>
               </li>
             </ul>

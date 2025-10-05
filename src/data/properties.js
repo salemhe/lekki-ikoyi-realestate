@@ -70,6 +70,7 @@ import Property39e from '../assets/propertys/property-39(e).jpg';
 import Property39f from '../assets/propertys/property-39(f).jpg';
 import Property39g from '../assets/propertys/property-39(g).jpg';
 import Property40 from '../assets/propertys/property-40.jpg';
+import { mapEasingToNativeEasing, mapValue } from 'framer-motion';
 
 
 
@@ -89,10 +90,6 @@ export const properties = [
     documents: "C of O",
     image: Property1,
     gallery: [        
-    // Property1,
-    // Property2,
-    // Property3,
-    // Property4,
   ],
     description:
       "This modern 8 units of 4-bedroom fully furnished apartment in the heart of Parkview offers premium finishing, spacious living areas, and proximity to key attractions. Perfect for families seeking both comfort and security.",
@@ -105,13 +102,13 @@ export const properties = [
   {
   id: 2,
   title: "3 Bedroom Penthouse",
-  location: "Ikoyi Parkview",
+  location: "Ikoyi Parkview estate",
   price: "₦420,000,000",
   beds: 3,
   baths: 4, 
   size: "",
   tags: ["FOR SALE", "FEATURED", "HOT OFFER"],
-  category: "Apartment",
+  category: "Penthouse",
   timePosted: "Just Now",
   agent: "Ikoyi Agent", // changed to reflect location
   documents: "Deed of Assignment",
@@ -127,6 +124,7 @@ export const properties = [
     "Underground Parking",
     "Fully Fitted Kitchen",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7928.968149889181!2d3.4367250353201784!3d6.460187584884675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4ead2fdb675%3A0xb2deeece992a1325!2sParkview%20Estate%2C%20Ikoyi%2C%20Lagos%20106104%2C%20Lagos!5e0!3m2!1sen!2sng!4v1759621251456!5m2!1sen!2sng",
 },
   {
   id: 3,
@@ -134,7 +132,7 @@ export const properties = [
   location: "Ikoyi Banana island road",
   price: "₦2,300,000,000",
   beds: 5,
-  baths: 5,
+  baths: 6,
   size: "",
   tags: ["FOR SALE", "FEATURED", "HOT OFFER"],
   category: "Duplex",
@@ -153,6 +151,7 @@ export const properties = [
     "Spacious Parking",
     "2 Bq",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4915861676536!2d3.4468819735037415!3d6.459228823909948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4edc9832d67%3A0x8e0b3a8e01f84c25!2sBanana%20Island%20Rd%2C%20Ikoyi%2C%20Lagos%20106104%2C%20Lagos!5e0!3m2!1sen!2sng!4v1759641730008!5m2!1sen!2sng"
 },
   {
   id: 4,
@@ -177,6 +176,7 @@ export const properties = [
     "Proximity to Major Landmarks",
     "Top-tier Neighborhood",
   ],
+  mapEmbed:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7928.968149889181!2d3.4367250353201784!3d6.460187584884675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4ead2fdb675%3A0xb2deeece992a1325!2sParkview%20Estate%2C%20Ikoyi%2C%20Lagos%20106104%2C%20Lagos!5e0!3m2!1sen!2sng!4v1759621251456!5m2!1sen!2sng"
 },
   {
   id: 5,
@@ -201,6 +201,7 @@ export const properties = [
     "Proximity to Major Landmarks",
     "Top-tier Neighborhood",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3964.455609210214!2d3.41894772350377!3d6.463819773857079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sosborne%20phase%201!5e0!3m2!1sen!2sng!4v1759641848445!5m2!1sen!2sng"
 },
   {
   id: 6,
@@ -225,6 +226,7 @@ export const properties = [
     "Proximity to Major Landmarks",
     "Top-tier Neighborhood",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31715.463629956226!2d3.4294002604991425!3d6.466709128653826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf48e1f7f0595%3A0xd636bdb81fb9e5e9!2sBanana%20Island!5e0!3m2!1sen!2sng!4v1759641899433!5m2!1sen!2sng"
 },
   {
   id: 7,
@@ -251,6 +253,7 @@ export const properties = [
     "Steady Power Supply",
     "Gated Estate Access",
   ],
+  mapEmbed:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31716.508012848895!2d3.41273326049128!3d6.450042081108044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4c4c84b52bb%3A0x5faec50ebdf1a1ea!2sIkoyi!5e0!3m2!1sen!2sng!4v1759641939131!5m2!1sen!2sng"
 },
   {
   id: 8,
@@ -277,6 +280,7 @@ export const properties = [
     "Reliable Water Supply",
     "Estate Power Backup",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.590504043557!2d3.43588057350366!3d6.44658932405541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4ddb69b3003%3A0xb11a2513c4a40a19!2sBourdillon%20Rd%2C%20Ikoyi%2C%20Lagos%20106104%2C%20Lagos!5e0!3m2!1sen!2sng!4v1759642099548!5m2!1sen!2sng"
 },
   {
   id: 9,
@@ -302,6 +306,7 @@ export const properties = [
     "Ideal for Residential Development",
     "Governor’s Consent Documentation",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d507401.6273415216!2d3.4452068069259227!3d6.512164140054081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf75df5c74367%3A0x6a7e7df9d6c1cd4a!2sLekki%2C%20Lagos!5e0!3m2!1sen!2sng!4v1759642204500!5m2!1sen!2sng"
 },
   {
   id: 10,
@@ -327,6 +332,7 @@ export const properties = [
     "24/7 Security",
     "Governor’s Consent Documentation",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31716.50801284885!2d3.41273326049128!3d6.450042081108044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4c4c84b52bb%3A0x5faec50ebdf1a1ea!2sIkoyi!5e0!3m2!1sen!2sng!4v1759642299175!5m2!1sen!2sng"
 },
   {
   id: 11,
@@ -354,6 +360,7 @@ export const properties = [
     "High-Level Security",
     "Ample Parking Space",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.5576128358207!2d3.4465957735036836!3d6.450794824007042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4ef164c1e2f%3A0x51d03d577c42fa70!2sAlexander%20Ave%2C%20Ikoyi%2C%20Lagos%20106104%2C%20Lagos!5e0!3m2!1sen!2sng!4v1759642436624!5m2!1sen!2sng"
 },
   {
   id: 12,
@@ -383,6 +390,7 @@ export const properties = [
     "Ample Parking",
     "Top-Level Estate Security",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31715.463629956226!2d3.4294002604991425!3d6.466709128653826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf48e1f7f0595%3A0xd636bdb81fb9e5e9!2sBanana%20Island!5e0!3m2!1sen!2sng!4v1759642528776!5m2!1sen!2sng"
 },
   {
   id: 13,
@@ -410,6 +418,7 @@ export const properties = [
     "Dedicated Parking Spaces",
     "Gated Estate Security",
   ],
+  mapValue: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31716.95873333722!2d3.4474020604878612!3d6.442835882168069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4523dd42677%3A0x849e078b14d85d7d!2sLekki%20Phase%20I%2C%20Lagos%20106104%2C%20Lagos!5e0!3m2!1sen!2sng!4v1759642805461!5m2!1sen!2sng"
 },
   {
   id: 14,
@@ -435,6 +444,7 @@ export const properties = [
     "Ideal for Mixed-Use Development",
     "Stable Neighborhood",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31716.95873333722!2d3.4474020604878612!3d6.442835882168069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4523dd42677%3A0x849e078b14d85d7d!2sLekki%20Phase%20I%2C%20Lagos%20106104%2C%20Lagos!5e0!3m2!1sen!2sng!4v1759642805461!5m2!1sen!2sng"
 },
   {
   id: 15,
@@ -459,6 +469,7 @@ export const properties = [
     "Modern Kitchen",
     "Spacious Parking",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31716.95873333722!2d3.4474020604878612!3d6.442835882168069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4523dd42677%3A0x849e078b14d85d7d!2sLekki%20Phase%20I%2C%20Lagos%20106104%2C%20Lagos!5e0!3m2!1sen!2sng!4v1759642805461!5m2!1sen!2sng"
 },
   {
   id: 16,
@@ -484,6 +495,7 @@ export const properties = [
     "Gated Estate Security",
     "Modern Finishing",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31716.95873333722!2d3.4474020604878612!3d6.442835882168069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4523dd42677%3A0x849e078b14d85d7d!2sLekki%20Phase%20I%2C%20Lagos%20106104%2C%20Lagos!5e0!3m2!1sen!2sng!4v1759642805461!5m2!1sen!2sng"
 },
 {
   id: 17,
@@ -509,6 +521,7 @@ export const properties = [
     "Modern Kitchen",
     "Gated Estate Security",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31716.95873333722!2d3.4474020604878612!3d6.442835882168069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4523dd42677%3A0x849e078b14d85d7d!2sLekki%20Phase%20I%2C%20Lagos%20106104%2C%20Lagos!5e0!3m2!1sen!2sng!4v1759642805461!5m2!1sen!2sng"
 },
   {
   id: 18,
@@ -534,6 +547,7 @@ export const properties = [
     "Ideal for Large-Scale Development",
     "High Investment Potential",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63431.73338182545!2d3.4006746692520218!3d6.460281852447568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf5caa0b320e1%3A0x79c4fd91e337cb6a!2sAtlantic%20Resort%20Limited!5e0!3m2!1sen!2sng!4v1759643986674!5m2!1sen!2sng"
 },
   {
   id: 19,
@@ -558,7 +572,8 @@ export const properties = [
     "Private Parking",
     "24/7 Security",
     "High-Quality Finishes",
-  ],
+  ], 
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7928.968149889181!2d3.4367250353201784!3d6.460187584884675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4ead2fdb675%3A0xb2deeece992a1325!2sParkview%20Estate%2C%20Ikoyi%2C%20Lagos%20106104%2C%20Lagos!5e0!3m2!1sen!2sng!4v1759644215454!5m2!1sen!2sng"
 },
   {
   id: 20,
@@ -584,6 +599,7 @@ export const properties = [
     "Modern Finishing",
     "Secure Estate",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31716.508012848895!2d3.41273326049128!3d6.450042081108044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4c4c84b52bb%3A0x5faec50ebdf1a1ea!2sIkoyi!5e0!3m2!1sen!2sng!4v1759644364962!5m2!1sen!2sng"
 },
   {
   id: 21,
@@ -609,6 +625,7 @@ export const properties = [
     "Spacious Parking",
     "High-End Finishing",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31715.463629956226!2d3.4294002604991425!3d6.466709128653826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf48e1f7f0595%3A0xd636bdb81fb9e5e9!2sBanana%20Island!5e0!3m2!1sen!2sng!4v1759644455169!5m2!1sen!2sng"
 },
   {
   id: 22,
@@ -643,6 +660,7 @@ export const properties = [
     "Modern Finishing",
     "Gated Estate Security",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31716.508012848895!2d3.41273326049128!3d6.450042081108044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4c4c84b52bb%3A0x5faec50ebdf1a1ea!2sIkoyi!5e0!3m2!1sen!2sng!4v1759644565979!5m2!1sen!2sng"
 },
   {
   id: 23,
@@ -669,6 +687,7 @@ export const properties = [
     "High-End Finishing",
     "Gated Estate",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31716.508012848895!2d3.41273326049128!3d6.450042081108044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4c4c84b52bb%3A0x5faec50ebdf1a1ea!2sIkoyi!5e0!3m2!1sen!2sng!4v1759644655386!5m2!1sen!2sng"
 },
   {
   id: 24,
@@ -701,6 +720,7 @@ export const properties = [
     "Spacious Living Area",
     "Gated Estate",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31716.508012848895!2d3.41273326049128!3d6.450042081108044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4c4c84b52bb%3A0x5faec50ebdf1a1ea!2sIkoyi!5e0!3m2!1sen!2sng!4v1759644655386!5m2!1sen!2sng"
 },
   {
   id: 25,
@@ -726,6 +746,7 @@ export const properties = [
     "Private Parking",
     "Modern Kitchen",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31707.624760642775!2d3.3368232605586488!3d6.590468060321949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9241eb22c505%3A0xee5aece21cd57d2b!2sOpebi%2C%20Ikeja%20101233%2C%20Lagos!5e0!3m2!1sen!2sng!4v1759644876543!5m2!1sen!2sng"
 },
   {
   id: 26,
@@ -751,6 +772,7 @@ export const properties = [
     "Good Road Network",
     "High Investment Value",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31717.760817196668!2d3.402072010481828!3d6.429992134055776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf52dc0328169%3A0x7885a1a33689a576!2sVictoria%20Island%2C%20Lagos%20106104%2C%20Lagos!5e0!3m2!1sen!2sng!4v1759645102502!5m2!1sen!2sng"
 },
   {
   id: 27,
@@ -777,6 +799,7 @@ export const properties = [
     "Private Parking Garage",
     "Gated Community",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31715.463629956226!2d3.4294002604991425!3d6.466709128653826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf48e1f7f0595%3A0xd636bdb81fb9e5e9!2sBanana%20Island!5e0!3m2!1sen!2sng!4v1759645179253!5m2!1sen!2sng"
 },
   {
   id: 28,
@@ -802,6 +825,7 @@ export const properties = [
     "Spacious Parking",
     "Gated Estate Security",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31715.463629956226!2d3.4294002604991425!3d6.466709128653826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf48e1f7f0595%3A0xd636bdb81fb9e5e9!2sBanana%20Island!5e0!3m2!1sen!2sng!4v1759645179253!5m2!1sen!2sng"
 },
   {
   id: 29,
@@ -825,6 +849,7 @@ export const properties = [
     "Close to Major Landmarks",
     "Ideal for Development",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15857.896421553032!2d3.4041087738706337!3d6.461459918042438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4b7a3694879%3A0x9d029a567f85c83c!2sOSBORNE%20FORESHORE%20ESTATE!5e0!3m2!1sen!2sng!4v1759645483592!5m2!1sen!2sng",
 },
   {
   id: 30,
@@ -853,6 +878,7 @@ export const properties = [
     "Ample Parking Space",
     "Gated Estate Security",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31707.624760642775!2d3.3368232605586488!3d6.590468060321949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9241eb22c505%3A0xee5aece21cd57d2b!2sOpebi%2C%20Ikeja%20101233%2C%20Lagos!5e0!3m2!1sen!2sng!4v1759645767004!5m2!1sen!2sng"
 },
   {
   id: 31,
@@ -877,6 +903,7 @@ export const properties = [
     "Spacious Parking",
     "Gated Estate Security",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31715.463629956226!2d3.4294002604991456!3d6.466709128653819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf48e1f7f0595%3A0xd636bdb81fb9e5e9!2sBanana%20Island!5e0!3m2!1sen!2sng!4v1759645954742!5m2!1sen!2sng"
 },
   {
   id: 32,
@@ -911,6 +938,7 @@ export const properties = [
     "Secure Parking",
     "Gated Community",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.7108594772976!2d3.42245287350356!3d6.431177224232379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf5716d7052ff%3A0xc7ffd21876df61f9!2sEko%20Atlantic!5e0!3m2!1sen!2sng!4v1759646131066!5m2!1sen!2sng"
 },
   {
   id: 33,
@@ -941,6 +969,7 @@ export const properties = [
     "Gated Estate Security",
     "Smart Home Features",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.7108594772976!2d3.42245287350356!3d6.431177224232379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf5716d7052ff%3A0xc7ffd21876df61f9!2sEko%20Atlantic!5e0!3m2!1sen!2sng!4v1759646131066!5m2!1sen!2sng"
 },
   {
   id: 34,
@@ -962,7 +991,7 @@ export const properties = [
     Property34c,
   ],
   description:
-    "A premium 2-bedroom flat in Banana Island, designed for modern living with stylish interiors and serene surroundings. Perfect for investors or homeowners seeking exclusivity in Lagos’s most prestigious neighborhood.",
+    "A premium 2-bedroom flat in Banana Island, designed for modern living with stylish interiors and serene surroundings. Perfect for investors or homeowners seeking exclusivity in Lagos most prestigious neighborhood.",
   amenities: [
     "24/7 Power Supply",
     "Modern Fitted Kitchen",
@@ -971,6 +1000,7 @@ export const properties = [
     "Gated Estate Security",
     "Smart Home Features",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31715.463629956226!2d3.4294002604991425!3d6.466709128653826!2m3!1f0!"
 },
   {
   id: 35,
@@ -998,6 +1028,7 @@ export const properties = [
     "Private Balcony",
     "Smart Home Features",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.623128551199!2d3.528648473503609!3d6.44241522410336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf6f9d972cbdb%3A0xafca4b441a977865!2sChevron%20Nigeria%20Limited%20Lekki%20Lagos!5e0!3m2!1sen!2sng!4v1759646794215!5m2!1sen!2sng"
 },
 {
   id: 36, //delete
@@ -1025,6 +1056,7 @@ export const properties = [
     "Private Balcony",
     "Modern Finishes",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7928.968149889181!2d3.4367250353201735!3d6.460187584884672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4ead2fdb675%3A0xb2deeece992a1325!2sParkview%20Estate%2C%20Ikoyi%2C%20Lagos%20106104%2C%20Lagos!5e0!3m2!1sen!2sng!4v1759646882571!5m2!1sen!2sng"
 },
   {
   id: 37,
@@ -1061,6 +1093,7 @@ export const properties = [
     "Gated Estate Security",
     "Smart Home Features",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7928.968149889181!2d3.4367250353201735!3d6.460187584884672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4ead2fdb675%3A0xb2deeece992a1325!2sParkview%20Estate%2C%20Ikoyi%2C%20Lagos%20106104%2C%20Lagos!5e0!3m2!1sen!2sng!4v1759646882571!5m2!1sen!2sng"
 },
 {
   id: 38,
@@ -1088,6 +1121,7 @@ export const properties = [
     "Gated Estate Security",
     "Modern Finishes",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31716.508012848895!2d3.4127332604912546!3d6.450042081108044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4c4c84b52bb%3A0x5faec50ebdf1a1ea!2sIkoyi!5e0!3m2!1sen!2sng!4v1759646934195!5m2!1sen!2sng"
 },
 {
   id: 39,
@@ -1124,6 +1158,7 @@ export const properties = [
     "Gated Estate Security",
     "Smart Home Features",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15858.55413407836!2d3.4789108238681656!3d6.4404433192577715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf432ea939f25%3A0x9c5443e9f67b05d6!2sIkate%20Elegushi%2C%20Lekki%20Penninsula%20II%2C%20Lekki%20106104%2C%20Lagos!5e0!3m2!1sen!2sng!4v1759646985386!5m2!1sen!2sng"
 },
   {
   id: 40,
@@ -1151,5 +1186,6 @@ export const properties = [
     "Private Balcony",
     "Modern Finishes",
   ],
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7928.968149889181!2d3.4367250353201784!3d6.460187584884675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4ead2fdb675%3A0xb2deeece992a1325!2sParkview%20Estate%2C%20Ikoyi%2C%20Lagos%20106104%2C%20Lagos!5e0!3m2!1sen!2sng!4v1759647015258!5m2!1sen!2sng"
 },
 ];
