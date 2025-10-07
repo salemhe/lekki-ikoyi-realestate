@@ -262,13 +262,13 @@ const Footer = () => {
               >
                 <Youtube className="h-5 w-5" />
               </a>
-              <a
+              {/* <a
                 href="#"
                 aria-label="Facebook"
                 className="hover:text-red-600 transition-colors"
               >
                 <FaLinkedin className="h-5 w-5" />
-              </a>
+              </a> */}
             </div>
           </div>
 

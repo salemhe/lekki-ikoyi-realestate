@@ -20,11 +20,13 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <img 
-              src={logo} 
-              alt="Logo" 
-              className="h-20 w-auto sm:h-20" 
-            />
+            <a href="/">
+                 <img 
+                  src={logo} 
+                  alt="Logo" 
+                  className="h-20 w-auto sm:h-20" 
+                />
+            </a>
           </div>
 
           {/* Desktop Nav */}
