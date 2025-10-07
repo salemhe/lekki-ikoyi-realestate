@@ -50,7 +50,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import heroVideo from "../../assets/images/lekkiikoyi-video.mp4";
+import heroVideo from "../../assets/images/mainhero.mp4";
 import SearchBar from "./SearchBar";
 
 const HeroSection = () => {
