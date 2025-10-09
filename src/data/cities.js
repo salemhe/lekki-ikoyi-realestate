@@ -1,14 +1,14 @@
-// ✅ Import residential property images
+//  Import residential property images
 import fullyDetachedImg from '../assets/images/fully-detached.png';
 import semiDetachedImg from '../assets/images/semi_detached.jpg';
 import apartmentImg from '../assets/images/apartment.jpg';
 import terracedDuplexImg from '../assets/images/terrace.jpg';
 
-// ✅ Import city images
+//  Import city images
 import lagosIslandImg from '../assets/images/ikoyi.jpg';
 import ibadanImg from '../assets/images/lekki.jpg'; 
 
-// ✅ Import new images for popular areas
+//  Import new images for popular areas
 import bananaImg from '../assets/images/banana-island.jpg';
 import ikoyiImg from '../assets/images/ikoyi.jpg';
 import ikotaLekkiImg from '../assets/images/lekki2.jpg';

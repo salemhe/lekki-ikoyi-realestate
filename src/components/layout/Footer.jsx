@@ -200,7 +200,7 @@
 
 
 
-//......................................................................
+
 import React, { useState, useEffect } from "react";
 import {
   Mail,
@@ -262,13 +262,6 @@ const Footer = () => {
               >
                 <Youtube className="h-5 w-5" />
               </a>
-              {/* <a
-                href="#"
-                aria-label="Facebook"
-                className="hover:text-red-600 transition-colors"
-              >
-                <FaLinkedin className="h-5 w-5" />
-              </a> */}
             </div>
           </div>
 
@@ -378,6 +371,6 @@ const Footer = () => {
 };
 
 export default Footer;
-//.................................................................................................................
+
 
 

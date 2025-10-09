@@ -15,7 +15,7 @@ const HeroSection = () => {
         muted
         playsInline
       />
-      {/* Fallback: if video fails, you could have a background image behind it, but optional */}
+      {/* Fallback: if video fails */}
 
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-l from-black/80 via-black/60 to-transparent lg:bg-gradient-to-r z-10" />
@@ -52,7 +52,7 @@ const HeroSection = () => {
           Discover curated properties in Nigeria’s most sought-after neighborhoods with us.
         </motion.p>
 
-        {/* Search Bar (wide) */}
+        {/* Search Bar (wide */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

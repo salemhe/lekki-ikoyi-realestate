@@ -182,7 +182,7 @@ const GetInquiryForm = () => {
                 className="w-full border p-2 focus:ring-2 focus:ring-red-500"
               />
 
-              {/* ✅ Updated International Phone */}
+              {/*  Updated International Phone */}
               <div>
                 <label className="block text-sm font-bold text-gray-700 mb-1">
                   Your Phone *
@@ -245,7 +245,7 @@ const GetInquiryForm = () => {
                 />
               </div>
 
-              {/* ✅ Submit Button */}
+              {/*  Submit Button */}
               <button
                 type="submit"
                 className={`w-full flex justify-center items-center gap-2 mt-10 bg-[#ff0000] text-white font-semibold py-2 transition ${
@@ -272,7 +272,7 @@ const GetInquiryForm = () => {
   );
 };
 
-// ✅ Animated Block Helper
+//  Animated Block Helper
 const AnimatedBlock = ({ children, variants }) => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, amount: 0.2 });

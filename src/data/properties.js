@@ -70,7 +70,7 @@ import Property39e from '../assets/propertys/property-39(e).jpg';
 import Property39f from '../assets/propertys/property-39(f).jpg';
 import Property39g from '../assets/propertys/property-39(g).jpg';
 import Property40 from '../assets/propertys/property-40.jpg';
-import { mapEasingToNativeEasing, mapValue } from 'framer-motion';
+// import { mapEasingToNativeEasing, mapValue } from 'framer-motion';
 
 
 

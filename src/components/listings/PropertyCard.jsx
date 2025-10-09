@@ -1,78 +1,3 @@
-// import React from 'react';
-// import { PiBed, PiBathtub } from 'react-icons/pi';
-// import { useNavigate } from 'react-router-dom';
-
-// const PropertyCard = ({ property }) => {
-//   const navigate = useNavigate();
-
-//   const handleClick = () => {
-//     navigate(`/property/${property.id}`);
-//   };
-
-//   // ✅ Ensure tags is always an array
-//   const tags = Array.isArray(property.tags) ? property.tags : [];
-
-//   return (
-//     <div
-//       onClick={handleClick}
-//       className="bg-white rounded-t-md rounded-b-none overflow-hidden border border-gray-200 
-//                  transition-all duration-300 cursor-pointer hover:brightness-105"
-//     >
-//       {/* Property Image */}
-//       <div className="relative">
-//         <img
-//           src={property.image}
-//           alt={property.title}
-//           className="w-full h-48 object-cover"
-//         />
-//       </div>
-
-//       {/* Property Details */}
-//       <div className="p-4">
-//         {/* ✅ Tags BELOW image, ABOVE title */}
-//         {tags.length > 0 && (
-//           <div className="flex flex-wrap gap-2 mb-2">
-//             {tags.map((tag, index) => (
-//               <span
-//                 key={index}
-//                 className="bg-gray-700 text-white text-xs font-medium 
-//                            px-2 py-0.5 rounded-sm transition-all duration-300 
-//                            hover:bg-orange-500"
-//               >
-//                 {tag}
-//               </span>
-//             ))}
-//           </div>
-//         )}
-
-//         {/* Title */}
-//         <h3 className="font-light text-lg text-gray-800 mb-1 leading-tight 
-//                        transition-all duration-300 hover:text-orange-500">
-//           {property.title}
-//         </h3>
-
-//         {/* Price */}
-//         <p className="text-xl font-bold text-gray-800 mb-4">{property.price}</p>
-
-//         {/* Beds and Baths icons */}
-//         <div className="flex items-center text-gray-600 space-x-4">
-//           <div className="flex items-center">
-//             <PiBed className="h-5 w-5 mr-1" />
-//             <span className="text-sm">{property.beds} Beds</span>
-//           </div>
-//           <div className="flex items-center">
-//             <PiBathtub className="h-5 w-5 mr-1" />
-//             <span className="text-sm">{property.baths} Baths</span>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default PropertyCard;
-
-
 import React from 'react';
 import { PiBed, PiBathtub } from 'react-icons/pi';
 import { useNavigate } from 'react-router-dom';
@@ -84,7 +9,7 @@ const PropertyCard = ({ property }) => {
     navigate(`/property/${property.id}`);
   };
   
-  // ✅ Ensure tags is always an array
+  //  Ensure tags is always an array
   const tags = Array.isArray(property.tags) ? property.tags : [];
 
   return (
@@ -98,10 +23,10 @@ const PropertyCard = ({ property }) => {
         backgroundPosition: 'center',
       }}
     >
-      {/* ✅ Overlay */}
+      {/*  Overlay */}
       <div className="absolute inset-0 bg-black/20 hover:bg-black/10 transition-all"></div>
 
-      {/* ✅ Property Details */}
+      {/*  Property Details */}
       <div className="relative z-10 p-4 flex flex-col justify-end h-full text-white">
         {/* Tags */}
         {tags.length > 0 && (

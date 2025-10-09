@@ -42,7 +42,7 @@ const PropertyCard = ({ title, propertiesCount, image, isLarge = false, filter }
       onClick={handleClick}
       className={`relative cursor-pointer overflow-hidden shadow-xl group rounded-sm
         ${isLarge 
-          ? 'w-70 h-60 md:w-[14rem] md:h-[32rem]'   // mobile same as others, desktop tall
+          ? 'w-70 h-60 md:w-[14rem] md:h-[32rem]'   
           : 'w-70 h-60'
         }`}
     >
@@ -54,7 +54,7 @@ const PropertyCard = ({ title, propertiesCount, image, isLarge = false, filter }
         className="absolute inset-0 w-full h-full object-cover transition-all duration-300 group-hover:brightness-110"
       />
 
-      {/* Overlay (optional for readability) */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/20 to-transparent"></div>
 
       {/* Content */}

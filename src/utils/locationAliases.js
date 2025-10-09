@@ -1,4 +1,3 @@
-// src/utils/locationAliases.js
 export const LOCATION_ALIASES = {
   "parkview": "ikoyi",
   "parkview estate": "ikoyi",
